@@ -1293,28 +1293,43 @@ ORDERED_VOCAB.forEach((v,i)=>{ v.id = 'w'+VOCAB.indexOf(v); v.day = Math.floor(i
 let progress = {};      // id -> {box, next, seen, correct, wrong}
 let startDate = null;   // ms timestamp of day 1
 let todayIndex = 1;
+let currentUser = null;
+let lastKnownUid = undefined; // undefined = not yet resolved, null = guest, string = uid
 
 function todayMs(){ const d=new Date(); d.setHours(0,0,0,0); return d.getTime(); }
 
-async function loadState(){
+// Every account (and the no-account/guest mode) gets its OWN localStorage
+// keys, so progress never bleeds between different logins on the same device.
+function storageKey(base){
+  const suffix = currentUser ? currentUser.uid : 'local';
+  return base + '_' + suffix;
+}
+
+async function loadLocalOnly(){
   try{
-    const v = localStorage.getItem('sv_start_date');
+    const v = localStorage.getItem(storageKey('sv_start_date'));
     startDate = v ? parseInt(v,10) : null;
   }catch(e){ startDate = null; }
   if(!startDate){
     startDate = todayMs();
-    try{ localStorage.setItem('sv_start_date', String(startDate)); }catch(e){}
   }
   todayIndex = Math.min(TOTAL_DAYS, Math.floor((todayMs()-startDate)/DAY_MS)+1);
-
   try{
-    const v = localStorage.getItem('sv_progress');
+    const v = localStorage.getItem(storageKey('sv_progress'));
     progress = v ? JSON.parse(v) : {};
   }catch(e){ progress = {}; }
 }
 
+async function loadState(){
+  // Fast first paint in guest mode; corrected moments later once Firebase
+  // resolves whether a previous login session should be restored instead.
+  currentUser = null;
+  await loadLocalOnly();
+}
+
 async function saveProgress(){
-  try{ localStorage.setItem('sv_progress', JSON.stringify(progress)); }catch(e){}
+  try{ localStorage.setItem(storageKey('sv_start_date'), String(startDate)); }catch(e){}
+  try{ localStorage.setItem(storageKey('sv_progress'), JSON.stringify(progress)); }catch(e){}
   if(fbEnabled && currentUser){
     try{
       await db.collection('users').doc(currentUser.uid).set({
@@ -1328,8 +1343,6 @@ async function saveProgress(){
 }
 
 // ---------- Cloud account sync ----------
-let currentUser = null;
-
 function setSyncBadge(synced, error){
   const el = document.getElementById('syncBadge');
   if(!el) return;
@@ -1349,16 +1362,19 @@ async function pullCloudProgress(){
     const doc = await db.collection('users').doc(currentUser.uid).get();
     if(doc.exists){
       const data = doc.data();
-      if(data.progress) progress = data.progress;
-      if(data.startDate) startDate = data.startDate;
+      progress = data.progress || {};
+      startDate = data.startDate || todayMs();
       todayIndex = Math.min(TOTAL_DAYS, Math.floor((todayMs()-startDate)/DAY_MS)+1);
       try{
-        localStorage.setItem('sv_progress', JSON.stringify(progress));
-        localStorage.setItem('sv_start_date', String(startDate));
+        localStorage.setItem(storageKey('sv_progress'), JSON.stringify(progress));
+        localStorage.setItem(storageKey('sv_start_date'), String(startDate));
       }catch(e){}
     } else {
-      // first login on this account: push whatever is on this device up to the cloud
-      await saveProgress();
+      // Brand new account: always start completely empty. Never carry over
+      // whatever happened to be in memory from a previous session/account.
+      progress = {};
+      startDate = todayMs();
+      await saveProgress(); // creates this account's cloud doc + local cache
     }
     setSyncBadge(true);
     renderAll();
@@ -1367,12 +1383,23 @@ async function pullCloudProgress(){
 
 if(fbEnabled){
   auth.onAuthStateChanged(async (user)=>{
+    const newUid = user ? user.uid : null;
+    if(newUid !== lastKnownUid){
+      // Identity changed (logged in, logged out, or switched accounts) —
+      // wipe in-memory state first so nothing from the old identity leaks.
+      progress = {};
+      startDate = null;
+    }
+    lastKnownUid = newUid;
     currentUser = user;
     setSyncBadge(!!user);
+
+    await loadLocalOnly(); // this identity's own cached copy (fast, offline-safe)
     if(user){
-      await pullCloudProgress();
+      await pullCloudProgress(); // reconcile with cloud (cloud wins if present)
     }
     renderAccountPanel();
+    renderAll();
   });
 }
 
@@ -1744,10 +1771,9 @@ document.querySelectorAll('nav.tabs button').forEach(btn=>{
 document.getElementById('resetLink').addEventListener('click', async ()=>{
   if(!confirm('Reset all learning progress? This cannot be undone.')) return;
   progress = {};
-  await saveProgress();
   startDate = todayMs();
-  try{ localStorage.setItem('sv_start_date', String(startDate)); }catch(e){}
   todayIndex = 1;
+  await saveProgress();
   renderAll();
 });
 
