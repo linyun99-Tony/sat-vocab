@@ -1519,6 +1519,38 @@ function shuffle(arr){
   return a;
 }
 
+// Weight a word's chance of showing up in quiz/fill rounds: words that are
+// due for review, or that have been gotten wrong more than right, come up
+// far more often; already-mastered words come up rarely (but not never).
+function priorityWeight(v){
+  const r = progress[v.id];
+  if(!r || r.seen===0) return 3;               // freshly introduced
+  if(r.wrong > r.correct) return 8;             // struggling — highest priority
+  if(isDue(v)) return 6;                        // due for review right now
+  if(r.box <= 1) return 5;                       // still early in the SRS cycle
+  if(r.box >= 5) return 1;                       // mastered — rare, just for upkeep
+  return 3;                                      // steadily learning
+}
+
+function weightedSample(words, n){
+  const weighted = [];
+  words.forEach(v=>{
+    const w = priorityWeight(v);
+    for(let i=0;i<w;i++) weighted.push(v);
+  });
+  const shuffled = shuffle(weighted);
+  const seen = new Set();
+  const result = [];
+  for(const v of shuffled){
+    if(!seen.has(v.id)){
+      seen.add(v.id);
+      result.push(v);
+      if(result.length>=n) break;
+    }
+  }
+  return result;
+}
+
 function updateStats(){
   const dueWords = ORDERED_VOCAB.filter(v=>isIntroduced(v) && isDue(v));
   const newWords = ORDERED_VOCAB.filter(v=>isNewToday(v));
@@ -1548,24 +1580,24 @@ function renderFlashcardQueue(containerId, words, emptyMsg){
     const v = words[idx];
     flipped = false;
     el.innerHTML = `
-      <div class="card" id="fcCard">
+      <div class="card">
         <div class="word">${v.w}</div>
         <div class="pos">${v.p}</div>
         <div class="pron-row">
           <span class="ipa">${v.ipa}</span>
-          <button class="play-btn" id="playBtnFront" title="Play pronunciation">&#128266;</button>
+          <button class="play-btn play-btn-front" title="Play pronunciation">&#128266;</button>
         </div>
         <div class="hint">${idx+1} / ${words.length} &middot; tap card to flip</div>
       </div>
-      <div class="btn-row" id="fcButtons" style="display:none;">
+      <div class="btn-row" style="display:none;">
         <button class="btn-again">Didn't know it</button>
         <button class="btn-hard">Kind of fuzzy</button>
         <button class="btn-good">Knew it</button>
       </div>
     `;
-    document.getElementById('fcCard').onclick = flip;
-    document.getElementById('playBtnFront').onclick = (ev)=>{ ev.stopPropagation(); speakWord(v.w); };
-    const btns = document.querySelectorAll('#fcButtons button');
+    el.querySelector('.card').onclick = flip;
+    el.querySelector('.play-btn-front').onclick = (ev)=>{ ev.stopPropagation(); speakWord(v.w); };
+    const btns = el.querySelectorAll('.btn-row button');
     btns[0].onclick = ()=>answer(0);
     btns[1].onclick = ()=>answer(1);
     btns[2].onclick = ()=>answer(2);
@@ -1578,18 +1610,18 @@ function renderFlashcardQueue(containerId, words, emptyMsg){
     if(v.e2){
       examplesHtml += `<div class="ex"><span class="ex-label">From your word list</span>${boldify(v.e2)}</div>`;
     }
-    document.getElementById('fcCard').innerHTML = `
+    el.querySelector('.card').innerHTML = `
       <div class="word">${v.w}</div>
       <div class="pos">${v.p}</div>
       <div class="pron-row">
         <span class="ipa">${v.ipa}</span>
-        <button class="play-btn" id="playBtnBack" title="Play pronunciation">&#128266;</button>
+        <button class="play-btn play-btn-back" title="Play pronunciation">&#128266;</button>
       </div>
       <div class="def">${v.d}</div>
       ${examplesHtml}
     `;
-    document.getElementById('playBtnBack').onclick = (ev)=>{ ev.stopPropagation(); speakWord(v.w); };
-    document.getElementById('fcButtons').style.display = 'flex';
+    el.querySelector('.play-btn-back').onclick = (ev)=>{ ev.stopPropagation(); speakWord(v.w); };
+    el.querySelector('.btn-row').style.display = 'flex';
   }
   function answer(q){
     markResult(words[idx], q);
@@ -1597,6 +1629,7 @@ function renderFlashcardQueue(containerId, words, emptyMsg){
     draw();
   }
   draw();
+
 
 }
 
@@ -1611,14 +1644,14 @@ function renderLearnPanel(){
 
 // ---------- Quiz (definition matching, all English) ----------
 function renderQuizPanel(){
-  const pool = shuffle(ORDERED_VOCAB.filter(v=>isIntroduced(v)));
+  const pool = ORDERED_VOCAB.filter(v=>isIntroduced(v));
   const el = document.getElementById('panel-quiz');
   if(pool.length < 4){
     el.innerHTML = '<div class="empty"><div class="big">&#128214;</div>Not enough words unlocked yet — learn a few more days first.</div>';
     return;
   }
   let idx = 0;
-  const queue = pool.slice(0, Math.min(15, pool.length));
+  const queue = weightedSample(pool, Math.min(15, pool.length));
 
   function draw(){
     if(idx >= queue.length){
@@ -1657,14 +1690,14 @@ function renderQuizPanel(){
 
 // ---------- Fill in the blank: word-only options, reveal definition after click ----------
 function renderFillPanel(){
-  const pool = shuffle(ORDERED_VOCAB.filter(v=>isIntroduced(v)));
+  const pool = ORDERED_VOCAB.filter(v=>isIntroduced(v));
   const el = document.getElementById('panel-fill');
   if(pool.length < 4){
     el.innerHTML = '<div class="empty"><div class="big">&#128214;</div>Not enough words unlocked yet — learn a few more days first.</div>';
     return;
   }
   let idx = 0;
-  const queue = pool.slice(0, Math.min(15, pool.length));
+  const queue = weightedSample(pool, Math.min(15, pool.length));
 
   function draw(){
     if(idx >= queue.length){
@@ -1673,10 +1706,23 @@ function renderFillPanel(){
       return;
     }
     const v = queue[idx];
+    // Alternate between the two known example sentences for this word so
+    // the same exact sentence doesn't show up every single time.
+    let sentence = v.e;
+    if(v.e2 && Math.random() < 0.5){
+      sentence = boldify(v.e2).replace(/<b>(.*?)<\/b>/, '<span class="blank">______</span>');
+      // if the target word wasn't wrapped in **bold** in this sentence, fall back
+      if(sentence.indexOf('class="blank"')===-1){
+        sentence = v.e2.replace(new RegExp('\\*\\*'+v.w+'.*?\\*\\*','i'), '<span class="blank">______</span>');
+      }
+      if(sentence.indexOf('class="blank"')===-1) sentence = v.e; // final fallback
+    } else {
+      sentence = v.e.replace('___', '<span class="blank">______</span>');
+    }
     const wrongs = shuffle(pool.filter(x=>x.id!==v.id)).slice(0,3);
     const options = shuffle([v, ...wrongs]);
     el.innerHTML = `
-      <div class="q-sent">${v.e.replace('___', '<span class="blank">______</span>')}</div>
+      <div class="q-sent">${sentence}</div>
       <div class="q-sub">Pick the word that best fits the blank (${idx+1}/${queue.length})</div>
       <div id="fOptions"></div>
     `;
