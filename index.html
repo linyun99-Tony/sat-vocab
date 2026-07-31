@@ -1313,7 +1313,7 @@ async function loadLocalOnly(){
   if(!startDate){
     startDate = todayMs();
   }
-  todayIndex = Math.min(TOTAL_DAYS, Math.floor((todayMs()-startDate)/DAY_MS)+1);
+  todayIndex = Math.floor((todayMs()-startDate)/DAY_MS)+1;
   try{
     const v = localStorage.getItem(storageKey('sv_progress'));
     progress = v ? JSON.parse(v) : {};
@@ -1364,7 +1364,7 @@ async function pullCloudProgress(){
       const data = doc.data();
       progress = data.progress || {};
       startDate = data.startDate || todayMs();
-      todayIndex = Math.min(TOTAL_DAYS, Math.floor((todayMs()-startDate)/DAY_MS)+1);
+      todayIndex = Math.floor((todayMs()-startDate)/DAY_MS)+1;
       try{
         localStorage.setItem(storageKey('sv_progress'), JSON.stringify(progress));
         localStorage.setItem(storageKey('sv_start_date'), String(startDate));
@@ -1558,7 +1558,9 @@ function updateStats(){
   document.getElementById('statNew').textContent = newWords.length;
   document.getElementById('statDue').textContent = dueWords.length;
   document.getElementById('statMastered').textContent = masteredCount;
-  document.getElementById('dayBadge').textContent = 'Day ' + todayIndex + ' / ' + TOTAL_DAYS;
+  document.getElementById('dayBadge').textContent = todayIndex <= TOTAL_DAYS
+    ? ('Day ' + todayIndex + ' / ' + TOTAL_DAYS)
+    : ('Day ' + todayIndex + ' — Review Mode');
 }
 
 // ---------- Flashcard renderer (used by both review + learn tabs) ----------
@@ -1639,7 +1641,10 @@ function renderReviewPanel(){
 }
 function renderLearnPanel(){
   const words = ORDERED_VOCAB.filter(v=>v.day===todayIndex);
-  renderFlashcardQueue('panel-learn', words, "You've finished today's new words. Come back tomorrow!");
+  const emptyMsg = todayIndex > TOTAL_DAYS
+    ? "All 1046 words have been introduced — nice work finishing the 25-day plan! Keep using the Review tab to stay sharp."
+    : "You've finished today's new words. Come back tomorrow!";
+  renderFlashcardQueue('panel-learn', words, emptyMsg);
 }
 
 // ---------- Quiz (definition matching, all English) ----------
@@ -1760,14 +1765,18 @@ function renderProgressPanel(){
   const mastered = introduced.filter(isMastered).length;
   const learning = introduced.filter(v=>{const r=progress[v.id]; return r && r.box>0 && r.box<5;}).length;
   const fresh = introduced.length - mastered - learning;
+  const dayCap = Math.min(todayIndex, TOTAL_DAYS);
   const byDay = {};
-  for(let d=1; d<=todayIndex; d++){
+  for(let d=1; d<=dayCap; d++){
     const words = ORDERED_VOCAB.filter(v=>v.day===d);
     const done = words.filter(v=>progress[v.id] && progress[v.id].seen>0).length;
     byDay[d] = {total:words.length, done};
   }
   let rows = '';
-  for(let d=todayIndex; d>=1; d--){
+  if(todayIndex > TOTAL_DAYS){
+    rows += `<div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--muted);margin-bottom:8px;">All 25 days of new words are complete — now in ongoing review mode (day ${todayIndex}).</div>`;
+  }
+  for(let d=dayCap; d>=1; d--){
     const info = byDay[d];
     const pct = info.total ? Math.round(100*info.done/info.total) : 0;
     rows += `<div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;">
