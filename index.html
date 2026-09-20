@@ -1259,9 +1259,532 @@ const VOCAB = [
 {w:'wrath',p:'n.',ipa:'/ræθ/',d:'vengeful anger',e:'He feared his father\'s ___ if he came home late.',e2:'Did you really want to incur her **wrath** when she is known for inflicting the worst punishments legally possible?'},
 {w:'yoke',p:'v./n.',ipa:'/joʊk/',d:'to join, link',e:'The two oxen were ___d together to pull the plow.',e2:'We **yoked** together the logs by tying a string around them.'},
 {w:'zephyr',p:'n.',ipa:'/ˈzɛfər/',d:'a gentle breeze',e:'A cool ___ drifted across the meadow.',e2:'If not for the **zephyrs** that were blowing and cooling us, our room would\'ve been unbearably hot.'},
+
+// --- New cohort: 518 words added, Day 26-30 ---
+{w:'untenable',p:'adj.',ipa:'/ʌnˈtɛnəbəl/',d:'(An argument, theory, or position) cannot be defended successfully against criticism or attack',e:'an ___ position',e2:'an **untenable** position'},
+{w:'behold',p:'v.',ipa:'/bɪˈhoʊld/',d:'to perceive through sight or apprehension',e:'They ___ a bright star shining in the sky.',e2:'They **beheld** a bright star shining in the sky.'},
+{w:'eclipse',p:'n.',ipa:'/ɪˈklɪps/',d:'an occasion when the moon passes between the earth and the sun so that you cannot see all or part of the sun for a time; an occasion when the earth passes between the moon and the sun so that you cannot see all or part of the moon for a time',e:'Her work was in ___ for most of the 20th century.',e2:'Her work was in **eclipse** for most of the 20th century.'},
+{w:'unorthodox',p:'adj./v./n.',ipa:'/ʌnˈɔːrθədɒks/',d:'(behaviour, beliefs, or customs) that are different from what is generally accepted',e:'___ methods',e2:'**unorthodox** methods'},
+{w:'superficial',p:'adj.',ipa:'/ˌsuːpərˈfɪʃəl/',d:'(describe someone) do not think deeply, and have little understanding of anything serious or important.',e:'The guests engaged in ___ chatter.',e2:'The guests engaged in **superficial** chatter.'},
+{w:'relevant',p:'adj.',ipa:'/ˈrɛləvənt/',d:'closely connected with the subject you are discussing or the situation you are thinking about',e:'These comments are not directly ___ to this enquiry.',e2:'These comments are not directly **relevant** to this enquiry.'},
+{w:'lineage',p:'n.',ipa:'/ˈlɪniɪdʒ/',d:'the series of families from which people are directly descended.',e:'She can trace her ___ back to the 1700s.',e2:'She can trace her **lineage** back to the 1700s.'},
+{w:'amplify',p:'v.',ipa:'/ˈæmplɪfaɪ/',d:'to increase sth in strength, especially sound',e:'The music was ___ with microphones.',e2:'The music was **amplified** with microphones.'},
+{w:'stipulate',p:'v.',ipa:'/ˈstɪpjəleɪt/',d:'to state clearly and firmly that sth must be done, or how it must be done',e:'The job advertisement ___ that the applicant must have three years\' experience.',e2:'The job advertisement **stipulates** that the applicant must have three years\' experience.'},
+{w:'reveal',p:'v.',ipa:'/rɪˈviːl/',d:'to make sth known to sb',e:'Details of the murder were ___ by the local paper.',e2:'Details of the murder were **revealed** by the local paper.'},
+{w:'supplant',p:'v.',ipa:'/səˈplænt/',d:'to take the place of sb/sth (especially sb/sth older or less modern)',e:'By the 1930s the wristwatch had almost completely ___ the pocket watch.',e2:'By the 1930s the wristwatch had almost completely **supplanted** the pocket watch.'},
+{w:'exaggerate',p:'v.',ipa:'/ɪɡˈzædʒəreɪt/',d:'to make sth seem larger, better, worse or more important than it really is',e:'The hotel was really filthy and I\'m not ___.',e2:'The hotel was really filthy and I\'m not **exaggerating**.'},
+{w:'anticipate',p:'adj./v./n.',ipa:'/ænˈtɪsɪpeɪt/',d:'realize in advance that an event may happen and you are prepared for it',e:'At the time we couldn\'t have ___ the result of our campaigning.',e2:'At the time we couldn\'t have **anticipated** the result of our campaigning.'},
+{w:'get ahead of',p:'v.',ipa:'/ɡɛt əˈhɛd ʌv/',d:'to come to a position in front of or in advance of something or someone',e:'We need to ___ the competition by launching our new product first.',e2:'We need to **get ahead of** the competition by launching our new product first.'},
+{w:'customary',p:'adj.',ipa:'/ˈkʌstəmɛri/',d:'used to describe things that people usually do in a particular society or in particular circumstances.',e:'It is ___ to offer a drink or a snack to guests.',e2:'It is **customary** to offer a drink or a snack to guests.'},
+{w:'sympathetic',p:'adj.',ipa:'/ˌsɪmpəˈθɛtɪk/',d:'kind to sb who is hurt or sad; showing that you understand and care about their problems',e:'She was very ___ to the problems of adult students.',e2:'She was very **sympathetic** to the problems of adult students.'},
+{w:'counterbalance',p:'v.',ipa:'/ˈkaʊntərbæləns/',d:'to have an equal but opposite effect to sth else',e:'Add honey to ___ the acidity.',e2:'Add honey to **counterbalance** the acidity.'},
+{w:'preliminary',p:'adj.',ipa:'/prɪˈlɪmɪnɛri/',d:'happening before a more important action or event',e:'___ results/findings/enquiries',e2:'**preliminary** results/findings/enquiries'},
+{w:'consequential',p:'adj.',ipa:'/ˌkɒnsɪˈkwɛnʃəl/',d:'happening as a result or an effect of sth',e:'retirement and the ___ reduction in income',e2:'retirement and the **consequential** reduction in income'},
+{w:'monetize',p:'v.',ipa:'/ˈmʌnɪtaɪz/',d:'to establish as the legal tender of a country',e:'The startup struggled to ___ its free app.',e2:'The startup struggled to **monetize** its free app.'},
+{w:'manifestation',p:'n.',ipa:'/ˌmænɪfɛˈsteɪʃən/',d:'an event, action or thing that is a sign that sth exists or is happening; the act of appearing as a sign that sth exists or is happening',e:'The riots are a clear ___ of the people\'s discontent.',e2:'The riots are a clear **manifestation** of the people\'s discontent.'},
+{w:'conjuncture',p:'n.',ipa:'/kənˈdʒʌŋktʃər/',d:'a combination of events, esp a critical one',e:'The sudden ___ of a market crash and a political scandal shook investor confidence.',e2:'The sudden conjuncture of a market crash and a political scandal shook investor confidence.'},
+{w:'inducement',p:'n.',ipa:'/ɪnˈdjuːsmənt/',d:'something that is given to sb to persuade them to do sth',e:'There is little ___ for them to work harder.',e2:'There is little **inducement** for them to work harder.'},
+{w:'profound',p:'adj./v./n.',ipa:'/prəˈfaʊnd/',d:'very great; felt or experienced very strongly',e:'___ changes in the earth\'s climate',e2:'**profound** changes in the earth\'s climate'},
+{w:'yield',p:'v.',ipa:'/jiːld/',d:'to produce or provide sth, for example a profit, result or crop',e:'The research has ___ useful information.',e2:'The research has **yielded** useful information.'},
+{w:'assertive',p:'adj.',ipa:'/əˈsɜːrtɪv/',d:'expressing opinions or desires strongly and with confidence, so that people take notice',e:'___ behaviour',e2:'**assertive** behaviour'},
+{w:'protectionist',p:'adj./v./n.',ipa:'/prəˈtɛkʃənɪst/',d:'policies, measures, and laws are meant to stop or reduce imports.',e:'someone who agrees with and supports ___.',e2:'someone who agrees with and supports **protectionism**.'},
+{w:'conceivable',p:'adj.',ipa:'/kənˈsiːvəbəl/',d:'that you can imagine or believe',e:'It is ___ that I\'ll see her tomorrow.',e2:'It is **conceivable** that I\'ll see her tomorrow.'},
+{w:'substantiate',p:'v.',ipa:'/səbˈstænʃieɪt/',d:'to provide information or evidence to prove that sth is true',e:'The results of the tests ___ his claims.',e2:'The results of the tests **substantiated** his claims.'},
+{w:'overlook',p:'v.',ipa:'/ˌoʊvərˈlʊk/',d:'to see the place clearly from the building or window.',e:'Pretty and comfortable rooms ___ a flower-filled garden.',e2:'Pretty and comfortable rooms **overlook** a flower-filled garden.'},
+{w:'scheme',p:'n.',ipa:'/skiːm/',d:'a plan or system for doing or organizing sth',e:'...a quick money-making ___ to get us through the summer',e2:'...a quick money-making **scheme** to get us through the summer'},
+{w:'imposing',p:'adj./v./n.',ipa:'/ɪmˈpoʊzɪŋ/',d:'impressive to look at; making a strong impression',e:'a grand and ___ building',e2:'a grand and **imposing** building'},
+{w:'exploit',p:'v.',ipa:'/ɪkˈsplɔɪt/',d:'to treat a person or situation as an opportunity to gain an advantage for yourself',e:'He ___ his father\'s name to get himself a job.',e2:'He **exploited** his father\'s name to get himself a job.'},
+{w:'scrutinize',p:'v.',ipa:'/ˈskruːtɪnaɪz/',d:'to look at or examine sb/sth carefully',e:'She leaned forward to ___ their faces.',e2:'She leaned forward to **scrutinize** their faces.'},
+{w:'deteriorate',p:'v.',ipa:'/dɪˈtɪriəreɪt/',d:'to become worse in some way',e:'There are fears that the situation might ___ into full-scale war.',e2:'There are fears that the situation might **deteriorate** into full-scale war.'},
+{w:'affecting',p:'adj./v./n.',ipa:'/əˈfɛktɪŋ/',d:'producing strong feelings of sadness and sympathy',e:'an ___ drama about a woman with a terminal illness',e2:'an **affecting** drama about a woman with a terminal illness'},
+{w:'granted',p:'adj./v./n.',ipa:'/ˈɡræntɪd/',d:'used to show that you accept that sth is true, often before you make another statement about it',e:'___ that the firm has not broken the law, is the law what it should be?',e2:'**Granted** that the firm has not broken the law, is the law what it should be?'},
+{w:'precursor',p:'n.',ipa:'/priˈkɜːrsər/',d:'a person or thing that comes before sb/sth similar and that leads to or influences its development',e:'He said that the deal should not be seen as a ___ to a merger.',e2:'He said that the deal should not be seen as a **precursor** to a merger.'},
+{w:'epitomize',p:'v.',ipa:'/ɪˈpɪtəmaɪz/',d:'to be a perfect example of sth',e:'The fighting qualities of the team are ___ by the captain.',e2:'The fighting qualities of the team are **epitomized** by the captain.'},
+{w:'constrict',p:'v.',ipa:'/kənˈstrɪkt/',d:'to become tighter or narrower; to make sth tighter or narrower',e:'Severe migraines can be treated with a drug that ___ the blood vessels.',e2:'Severe migraines can be treated with a drug that **constricts** the blood vessels.'},
+{w:'synopsis',p:'n.',ipa:'/sɪˈnɒpsɪs/',d:'a summary of a piece of writing, a play, etc.',e:'The editor asked for a one-page ___ of the novel.',e2:'The editor asked for a one-page **synopsis** of the novel.'},
+{w:'capitalize',p:'adj./v./n.',ipa:'/ˈkæpɪtəlaɪz/',d:'capitalize on a situation: use it to gain some advantage for yourself.',e:'The team failed to ___ on their early lead.',e2:'The team failed to **capitalize** on their early lead.'},
+{w:'dispute',p:'n.',ipa:'/dɪˈspjuːt/',d:'an argument or disagreement between people or groups.',e:'a ___ between the two countries about the border',e2:'a **dispute** between the two countries about the border'},
+{w:'define',p:'v.',ipa:'/dɪˈfaɪn/',d:'to say or explain what the meaning of a word or phrase is',e:'The term ‘mental illness’ is difficult to ___.',e2:'The term ‘mental illness’ is difficult to **define**.'},
+{w:'exhibit',p:'v.',ipa:'/ɪɡˈzɪbɪt/',d:'to show sth in a public place for people to enjoy or to give them information',e:'His work was ___ in the best galleries in America, Europe and Asia.',e2:'His work was **exhibited** in the best galleries in America, Europe and Asia.'},
+{w:'palpable',p:'adj.',ipa:'/ˈpælpəbəl/',d:'that is easily noticed by the mind or the senses',e:'The tension in the room was almost ___.',e2:'The tension in the room was almost **palpable**.'},
+{w:'prestige',p:'n.',ipa:'/prɛˈstiːʒ/',d:'the respect and admiration that sb/sth has because of their social position, or what they have done',e:'There is a lot of ___ attached to owning a car like this.',e2:'There is a lot of **prestige** attached to owning a car like this.'},
+{w:'precede',p:'v.',ipa:'/prɪˈsiːd/',d:'to happen before sth or come before sth/sb in order',e:'The earthquake was ___ by a loud roar and lasted 20 seconds.',e2:'The earthquake was **preceded** by a loud roar and lasted 20 seconds.'},
+{w:'transpose',p:'v.',ipa:'/trænsˈpoʊz/',d:'to move or change sth to a different place or environment or into a different form',e:'The director ___ Shakespeare\'s play from 16th century Venice to present-day England.',e2:'The director **transposes** Shakespeare\'s play from 16th century Venice to present-day England.'},
+{w:'tally',p:'n.',ipa:'/ˈtæli/',d:'a record of amounts or numbers which you keep changing and adding to as the activity which affects it progresses.',e:'He hopes to improve on his ___ of three goals in the past nine games.',e2:'He hopes to improve on his **tally** of three goals in the past nine games.'},
+{w:'overreach',p:'adj./v./n.',ipa:'/ˌoʊvərˈriːtʃ/',d:'~ (yourself) to fail by trying to achieve more than is possible',e:'In making these promises, the company had clearly ___ itself.',e2:'In making these promises, the company had clearly **overreached** itself.'},
+{w:'understate',p:'v.',ipa:'/ˌʌndərˈsteɪt/',d:'to state that sth is smaller, less important or less serious than it really is',e:'It would be a mistake to ___ the seriousness of the problem.',e2:'It would be a mistake to **understate** the seriousness of the problem.'},
+{w:'understated',p:'adj./v./n.',ipa:'/ˌʌndərˈsteɪtɪd/',d:'(describe a style, colour, or effect) simple and plain, and does not attract attention to itself.',e:'I have always liked ___ clothes.',e2:'I have always liked **understated** clothes.'},
+{w:'intricate',p:'adj.',ipa:'/ˈɪntrɪkət/',d:'having a lot of different parts and small details that fit together',e:'___ carved sculptures',e2:'**intricately** carved sculptures'},
+{w:'steer',p:'v.',ipa:'/stɪr/',d:'to control the direction in which a boat, car, etc. moves',e:'He took her arm and ___ her towards the door.',e2:'He took her arm and **steered** her towards the door.'},
+{w:'prolong',p:'v.',ipa:'/prəˈlɒŋ/',d:'to make sth last longer',e:'The operation could ___ his life by two or three years.',e2:'The operation could **prolong** his life by two or three years.'},
+{w:'soothe',p:'v.',ipa:'/suːð/',d:'to make sb who is anxious, upset, etc. feel calmer',e:'He would take her in his arms and ___ her.',e2:'He would take her in his arms and **soothe** her.'},
+{w:'revolt',p:'n.',ipa:'/rɪˈvoʊlt/',d:'a protest against authority, especially that of a government, often involving violence; the action of protesting against authority',e:'The army quickly crushed the ___.',e2:'The army quickly crushed the **revolt**.'},
+{w:'fusion',p:'n.',ipa:'/ˈfjuːʒən/',d:'the process or result of joining two or more things together to form one',e:'The movie displayed a perfect ___ of image and sound.',e2:'The movie displayed a perfect **fusion** of image and sound.'},
+{w:'dismiss',p:'v.',ipa:'/dɪsˈmɪs/',d:'to decide that sb/sth is not important and not worth thinking or talking about',e:'He ___ the opinion polls as worthless.',e2:'He **dismissed** the opinion polls as worthless.'},
+{w:'register',p:'v.',ipa:'/ˈrɛdʒɪstər/',d:'to record your/sb\'s/sth\'s name on an official list',e:'She is officially ___ (as) disabled.',e2:'She is officially **registered** (as) disabled.'},
+{w:'enrol',p:'v.',ipa:'/ɪnˈroʊl/',d:'to arrange for yourself or for sb else to officially join a course, school, etc.',e:'to ___ on a course',e2:'to **enrol** on a course'},
+{w:'disregard',p:'v.',ipa:'/ˌdɪsrɪˈɡɑːrd/',d:'to not consider sth; to treat sth as unimportant',e:'The board completely ___ my recommendations.',e2:'The board completely **disregarded** my recommendations.'},
+{w:'idealize',p:'v.',ipa:'/aɪˈdiːəlaɪz/',d:'to consider or represent sb/sth as being perfect or better than they really are',e:'It is tempting to ___ the past.',e2:'It is tempting to **idealize** the past.'},
+{w:'establish',p:'v.',ipa:'/ɪˈstæblɪʃ/',d:'to start or create an organization, a system, etc. that is meant to last for a long time',e:'The new treaty ___ a free trade zone.',e2:'The new treaty **establishes** a free trade zone.'},
+{w:'endure',p:'v.',ipa:'/ɪnˈdjʊr/',d:'to experience and deal with sth that is painful or unpleasant, especially without complaining',e:'They had to ___ a long wait before the case came to trial.',e2:'They had to **endure** a long wait before the case came to trial.'},
+{w:'annotate',p:'v.',ipa:'/ˈænəteɪt/',d:'to add notes to a book or text, giving explanations or comments',e:'Historians ___, check and interpret the diary selections.',e2:'Historians **annotate**, check and interpret the diary selections.'},
+{w:'eccentric',p:'adj.',ipa:'/ɪkˈsɛntrɪk/',d:'considered by other people to be strange or unusual',e:'___ behaviour/clothes',e2:'**eccentric** behaviour/clothes'},
+{w:'meagre',p:'adj./v./n.',ipa:'/ˈmiːɡər/',d:'small in quantity and poor in quality',e:'The rations that they gave us were ___ and inadequate.',e2:'The rations that they gave us were **meagre** and inadequate.'},
+{w:'hideous',p:'adj.',ipa:'/ˈhɪdiəs/',d:'very ugly or unpleasant',e:'a ___ crime a hideous face/building/dress',e2:'a **hideous** crime a hideous face/building/dress'},
+{w:'irresolvable',p:'adj.',ipa:'/ˌɪrɪˈzɒlvəbəl/',d:'not able to be resolved into parts or elements',e:'This is again, one of that ___ areas.',e2:'This is again, one of that **irresolvable** areas.'},
+{w:'survey',p:'v.',ipa:'/sərˈveɪ/',d:'to look carefully at the whole of sth, especially in order to get a general impression of it',e:'The next morning we ___ the damage caused by the fire.',e2:'The next morning we **surveyed** the damage caused by the fire.'},
+{w:'timeworn',p:'adj./v./n.',ipa:'/ˈtaɪmwɔːrn/',d:'old or has been used a lot over a long period of time',e:'Even in the dim light the equipment looked old and ___.',e2:'Even in the dim light the equipment looked old and **timeworn**.'},
+{w:'rectify',p:'v.',ipa:'/ˈrɛktɪfaɪ/',d:'to put right sth that is wrong',e:'We must take steps to ___ the situation.',e2:'We must take steps to **rectify** the situation.'},
+{w:'unprecedented',p:'adj./v./n.',ipa:'/ʌnˈprɛsɪdɛntɪd/',d:'that has never happened, been done or been known before',e:'Such a move is rare, but not ___.',e2:'Such a move is rare, but not **unprecedented**.'},
+{w:'apprise',p:'v.',ipa:'/əˈpraɪz/',d:'to tell or inform sb of sth',e:'Have customers been fully ___ of the advantages?',e2:'Have customers been fully **apprised** of the advantages?'},
+{w:'tender',p:'adj./v./n.',ipa:'/ˈtɛndər/',d:'kind, gentle and loving',e:'___ words',e2:'**tender** words'},
+{w:'voluntarily',p:'adj.',ipa:'/ˌvɒlənˈtɛrəli/',d:'willingly; without being forced',e:'He was not asked to leave—he went ___.',e2:'He was not asked to leave—he went **voluntarily**.'},
+{w:'unequivocal',p:'adj.',ipa:'/ˌʌnɪˈkwɪvəkəl/',d:'expressing your opinion or intention very clearly and firmly',e:'an ___ rejection',e2:'an **unequivocal** rejection'},
+{w:'recurrent',p:'adj.',ipa:'/rɪˈkʌrənt/',d:'event or feeling happens or is experienced more than once.',e:'Race is a ___ theme in the work.',e2:'Race is a **recurrent** theme in the work.'},
+{w:'embrace',p:'v.',ipa:'/ɪmˈbreɪs/',d:'to put your arms around sb as a sign of love or friendship',e:'They ___ and promised to keep in touch.',e2:'They **embraced** and promised to keep in touch.'},
+{w:'startle',p:'v.',ipa:'/ˈstɑːrtəl/',d:'to surprise sb suddenly in a way that slightly shocks or frightens them',e:'The explosion ___ the horse.',e2:'The explosion **startled** the horse.'},
+{w:'interdependent',p:'adj.',ipa:'/ˌɪntərdɪˈpɛndənt/',d:'that depend on each other; consisting of parts that depend on each other',e:'The world is becoming increasingly ___.',e2:'The world is becoming increasingly **interdependent**.'},
+{w:'unyielding',p:'adj./v./n.',ipa:'/ʌnˈjiːldɪŋ/',d:'not easily influenced and they are unlikely to change their mind',e:'The authorities proved ___ on one crucial demand.',e2:'The authorities proved **unyielding** on one crucial demand.'},
+{w:'partition',p:'v.',ipa:'/pɑːrˈtɪʃən/',d:'to divide sth into parts',e:'to ___ a country',e2:'to **partition** a country'},
+{w:'vacate',p:'v.',ipa:'/ˈveɪkeɪt/',d:'to leave a building, seat, etc., especially so that sb else can use it',e:'Guests are requested to ___ their rooms by noon on the day of departure.',e2:'Guests are requested to **vacate** their rooms by noon on the day of departure.'},
+{w:'enhance',p:'v.',ipa:'/ɪnˈhæns/',d:'to increase or further improve the good quality, value or status of sb/sth',e:'This is an opportunity to ___ the reputation of the company.',e2:'This is an opportunity to **enhance** the reputation of the company.'},
+{w:'conspicuous',p:'adj.',ipa:'/kənˈspɪkjuəs/',d:'easy to see or notice; likely to attract attention',e:'Mary\'s red hair always made her ___ at school.',e2:'Mary\'s red hair always made her **conspicuous** at school.'},
+{w:'antagonistic',p:'adj.',ipa:'/ænˌtæɡəˈnɪstɪk/',d:'showing or feeling opposition',e:'Nearly all the women I interviewed were aggressively ___ to the idea.',e2:'Nearly all the women I interviewed were aggressively **antagonistic** to the idea.'},
+{w:'inconsequential',p:'adj.',ipa:'/ˌɪnkɒnsɪˈkwɛnʃəl/',d:'not important or worth considering',e:'___ details',e2:'**inconsequential** details'},
+{w:'momentous',p:'adj.',ipa:'/moʊˈmɛntəs/',d:'very important or serious, especially because there may be important results',e:'a ___ decision/event/occasion',e2:'a **momentous** decision/event/occasion'},
+{w:'genuine',p:'adj./v./n.',ipa:'/ˈdʒɛnjuɪn/',d:'real; exactly what it appears to be; not artificial',e:'Is the painting a ___ Picasso?',e2:'Is the painting a **genuine** Picasso?'},
+{w:'insuperable',p:'adj.',ipa:'/ɪnˈsuːpərəbəl/',d:'( of difficulties, problems, etc. ) that cannot be dealt with successfully',e:'an ___ obstacle to negotiations',e2:'an **insuperable** obstacle to negotiations'},
+{w:'irreproachable',p:'adj.',ipa:'/ˌɪrɪˈproʊtʃəbəl/',d:'( of a person or their behaviour ) free from fault and impossible to criticize',e:'She welcomed her unexpected visitor with ___ politeness.',e2:'She welcomed her unexpected visitor with **irreproachable** politeness.'},
+{w:'ineluctable',p:'adj.',ipa:'/ˌɪnɪˈlʌktəbəl/',d:'cannot be stopped, escaped, or ignored.',e:'...the ___ tendency of populations to exceed resources',e2:'...the **ineluctable** tendency of populations to exceed resources'},
+{w:'utilize',p:'v.',ipa:'/ˈjuːtɪlaɪz/',d:'to use sth, especially for a practical purpose',e:'The Romans were the first to ___ concrete as a building material.',e2:'The Romans were the first to **utilize** concrete as a building material.'},
+{w:'distinctive',p:'adj.',ipa:'/dɪˈstɪŋktɪv/',d:'having a quality or characteristic that makes sth different and easily noticed',e:'The male bird has ___ white markings on its head.',e2:'The male bird has **distinctive** white markings on its head.'},
+{w:'misconstrue',p:'v.',ipa:'/ˌmɪskənˈstruː/',d:'to understand sb\'s words or actions wrongly',e:'An outsider might ___ the nature of the relationship.',e2:'An outsider might **misconstrue** the nature of the relationship.'},
+{w:'reproduction',p:'n.',ipa:'/ˌriːprəˈdʌkʃən/',d:'a copy of something such as a piece of furniture or a work of art.',e:'sexual ___',e2:'sexual **reproduction**'},
+{w:'disguise',p:'v.',ipa:'/dɪsˈɡaɪz/',d:'to change your appearance so that people cannot recognize you',e:'She ___ herself as a boy.',e2:'She **disguised** herself as a boy.'},
+{w:'reject',p:'v.',ipa:'/rɪˈdʒɛkt/',d:'to refuse to accept or consider sth',e:'to ___ an argument/a claim/a decision/an offer/a suggestion',e2:'to **reject** an argument/a claim/a decision/an offer/a suggestion'},
+{w:'ineligible',p:'adj.',ipa:'/ɪnˈɛlɪdʒəbəl/',d:'not having the necessary qualifications to have or to do sth',e:'___ for financial assistance',e2:'**ineligible** for financial assistance'},
+{w:'exactitude',p:'n.',ipa:'/ɪɡˈzæktɪtjuːd/',d:'the quality of being very accurate and exact',e:'the precision and ___ of current genetic mapping',e2:'the precision and **exactitude** of current genetic mapping'},
+{w:'resilience',p:'n.',ipa:'/rɪˈzɪliəns/',d:'the ability of people or things to feel better quickly after sth unpleasant, such as shock, injury, etc.',e:'The community showed great ___ after the flood.',e2:'The community showed great **resilience** after the flood.'},
+{w:'insensible',p:'adj.',ipa:'/ɪnˈsɛnsəbəl/',d:'unable to feel sth or react to it',e:'___ to pain/cold',e2:'**insensible** to pain/cold'},
+{w:'extrapolate',p:'v.',ipa:'/ɪkˈstræpəleɪt/',d:'to estimate sth or form an opinion about sth, using the facts that you have now and that are valid for one situation and supposing that they will be valid for the new one',e:'We have ___ these results from research done in other countries.',e2:'We have **extrapolated** these results from research done in other countries.'},
+{w:'observe',p:'v.',ipa:'/əbˈzɜːrv/',d:'to make a remark',e:'She ___ that it was getting late.',e2:'She **observed** that it was getting late.'},
+{w:'launch',p:'v.',ipa:'/lɔːntʃ/',d:'to start an activity, especially an organized one',e:'to ___ an appeal/an inquiry/an investigation/a campaign',e2:'to **launch** an appeal/an inquiry/an investigation/a campaign'},
+{w:'symbolize',p:'v.',ipa:'/ˈsɪmbəlaɪz/',d:'to be a symbol of sth',e:'The use of light and dark ___ good and evil.',e2:'The use of light and dark **symbolizes** good and evil.'},
+{w:'conceal',p:'v.',ipa:'/kənˈsiːl/',d:'to hide sb/sth',e:'The paintings were ___ beneath a thick layer of plaster.',e2:'The paintings were **concealed** beneath a thick layer of plaster.'},
+{w:'suspicious',p:'adj.',ipa:'/səˈspɪʃəs/',d:'feeling that sb has done sth wrong, illegal or dishonest, without having any proof',e:'They became ___ of his behaviour and contacted the police.',e2:'They became **suspicious** of his behaviour and contacted the police.'},
+{w:'hew',p:'v.',ipa:'/hjuː/',d:'to cut sth large with a tool',e:'to ___ wood',e2:'to **hew** wood'},
+{w:'coincide',p:'adj./v./n.',ipa:'/ˌkoʊɪnˈsaɪd/',d:'( of two or more events ) to take place at the same time',e:'It\'s a pity our trips to New York don\'t ___.',e2:'It\'s a pity our trips to New York don\'t **coincide**.'},
+{w:'reverence',p:'n.',ipa:'/ˈrɛvərəns/',d:'a feeling of great respect or admiration for sb/sth',e:'The poem conveys his deep ___ for nature.',e2:'The poem conveys his deep **reverence** for nature.'},
+{w:'blend',p:'v.',ipa:'/blɛnd/',d:'to mix two or more substances together',e:'___ the flour with the milk to make a smooth paste.',e2:'**Blend** the flour with the milk to make a smooth paste.'},
+{w:'exhaustive',p:'adj.',ipa:'/ɪɡˈzɔːstɪv/',d:'including everything possible; very thorough or complete',e:'___ research/tests',e2:'**exhaustive** research/tests'},
+{w:'questionable',p:'adj.',ipa:'/ˈkwɛstʃənəbəl/',d:'that you have doubts about because you think it is not accurate or correct',e:'The conclusions that they come to are highly ___.',e2:'The conclusions that they come to are highly **questionable**.'},
+{w:'feature',p:'v.',ipa:'/ˈfiːtʃər/',d:'to include a particular person or thing as a special feature',e:'The film ___ Cary Grant as a professor.',e2:'The film **features** Cary Grant as a professor.'},
+{w:'convert',p:'v.',ipa:'/kənˈvɜːrt/',d:'to change or make sth change from one form, purpose, system, etc. to another',e:'The hotel is going to be ___ into a nursing home.',e2:'The hotel is going to be **converted** into a nursing home.'},
+{w:'biased',p:'adj.',ipa:'/ˈbaɪəst/',d:'having a tendency to show favour towards or against one group of people or one opinion for personal reasons; making unfair judgements',e:'___ information/sources/press reports',e2:'**biased** information/sources/press reports'},
+{w:'misinform',p:'v.',ipa:'/ˌmɪsɪnˈfɔːrm/',d:'to give sb wrong information about sth',e:'They were deliberately ___ about their rights.',e2:'They were deliberately **misinformed** about their rights.'},
+{w:'detract',p:'v.',ipa:'/dɪˈtrækt/',d:'to make sth seem less good or enjoyable',e:'He was determined not to let anything ___ from his enjoyment of the trip.',e2:'He was determined not to let anything **detract** from his enjoyment of the trip.'},
+{w:'disparity',p:'n.',ipa:'/dɪˈspærəti/',d:'a difference, especially one connected with unfair treatment',e:'Some people think that financial ___ affects friendship.',e2:'Some people think that financial **disparity** affects friendship.'},
+{w:'equivalence',p:'n.',ipa:'/ɪˈkwɪvələns/',d:'If there is equivalence between two things, they have the same use, function, size, or value.',e:'For women in the military, the search for equality will still be based on functional ___, not identity or even similarity of task.',e2:'For women in the military, the search for equality will still be based on functional **equivalence**, not identity or even similarity of task.'},
+{w:'awkward',p:'adj./v./n.',ipa:'/ˈɔːkwərd/',d:'making you feel embarrassed',e:'There was an ___ silence.',e2:'There was an **awkward** silence.'},
+{w:'manageable',p:'adj.',ipa:'/ˈmænɪdʒəbəl/',d:'possible to deal with or control',e:'Use conditioner regularly to make your hair soft and ___.',e2:'Use conditioner regularly to make your hair soft and **manageable**.'},
+{w:'competent',p:'adj.',ipa:'/ˈkɒmpɪtənt/',d:'having enough skill or knowledge to do sth well or to the necessary standard',e:'Make sure the firm is ___ to carry out the work.',e2:'Make sure the firm is **competent** to carry out the work.'},
+{w:'deliberation',p:'n.',ipa:'/dɪˌlɪbəˈreɪʃən/',d:'the process of carefully considering or discussing sth',e:'After ten hours of ___, the jury returned a verdict of ‘not guilty ’.',e2:'After ten hours of **deliberation**, the jury returned a verdict of ‘not guilty ’.'},
+{w:'ineffectual',p:'adj.',ipa:'/ˌɪnɪˈfɛktʃuəl/',d:'without the ability to achieve much; weak; not achieving what you want to',e:'an ___ teacher',e2:'an **ineffectual** teacher'},
+{w:'cynical',p:'adj.',ipa:'/ˈsɪnɪkəl/',d:'believing that people only do things to help themselves rather than for good or honest reasons',e:'Do you have to be so ___ about everything?',e2:'Do you have to be so **cynical** about everything?'},
+{w:'counterproductive',p:'adj.',ipa:'/ˌkaʊntərprəˈdʌktɪv/',d:'having the opposite effect to the one which was intended',e:'In practice, however, such an attitude is ___',e2:'In practice, however, such an attitude is **counterproductive**'},
+{w:'indisputable',p:'adj.',ipa:'/ˌɪndɪˈspjuːtəbəl/',d:'that is true and cannot be disagreed with or denied',e:'___ evidence',e2:'**indisputable** evidence'},
+{w:'overshadow',p:'v.',ipa:'/ˌoʊvərˈʃædoʊ/',d:'to make sb/sth seem less important, or successful',e:'He had always been ___ by his elder sister.',e2:'He had always been **overshadowed** by his elder sister.'},
+{w:'distract',p:'v.',ipa:'/dɪˈstrækt/',d:'to take sb\'s attention away from what they are trying to do',e:'You\'re ___ me from my work.',e2:'You\'re **distracting** me from my work.'},
+{w:'untrustworthy',p:'adj.',ipa:'/ʌnˈtrʌstwɜːrði/',d:'If you say that someone is untrustworthy, you think they are unreliable and cannot be trusted.',e:'I think he is shallow, vain and ___.',e2:'I think he is shallow, vain and **untrustworthy**.'},
+{w:'provocative',p:'adj.',ipa:'/prəˈvɒkətɪv/',d:'intended to make people angry or upset; intended to make people argue about sth',e:'a ___ remark',e2:'a **provocative** remark'},
+{w:'irrefutable',p:'adj.',ipa:'/ˌɪrɪˈfjuːtəbəl/',d:'that cannot be proved wrong and that must therefore be accepted',e:'___ evidence',e2:'**irrefutable** evidence'},
+{w:'incongruous',p:'adj.',ipa:'/ɪnˈkɒŋɡruəs/',d:'strange, and not suitable in a particular situation',e:'Such traditional methods seem ___ in our technical age.',e2:'Such traditional methods seem **incongruous** in our technical age.'},
+{w:'equitable',p:'adj.',ipa:'/ˈɛkwɪtəbəl/',d:'fair and reasonable; treating everyone in an equal way',e:'He has urged them to come to an ___ compromise that gives Hughes his proper due.',e2:'He has urged them to come to an **equitable** compromise that gives Hughes his proper due.'},
+{w:'unattainable',p:'adj.',ipa:'/ˌʌnəˈteɪnəbəl/',d:'impossible to achieve or reach',e:'There are those who argue that true independent advice is ___.',e2:'There are those who argue that true independent advice is **unattainable**.'},
+{w:'clumsy',p:'adj.',ipa:'/ˈklʌmzi/',d:'( of people and animals ) moving or doing things in a very awkward way',e:'His ___ attempt to apologize only made things worse.',e2:'His clumsy attempt to apologize only made things worse.'},
+{w:'retroactive',p:'adj.',ipa:'/ˌrɛtroʊˈæktɪv/',d:'If a decision or action is retroactive, it is intended to take effect from a date in the past.',e:'The pay raise was made ___ to January.',e2:'The pay raise was made **retroactive** to January.'},
+{w:'ceremoniously',p:'adj.',ipa:'/ˌsɛrɪˈmoʊniəsli/',d:'If someone does something ceremoniously, they do it in an extremely formal way.',e:'They ___ cut a piece of ribbon, declaring the exhibition open.',e2:'They **ceremoniously** cut a piece of ribbon, declaring the exhibition open.'},
+{w:'joint',p:'adj./v./n.',ipa:'/dʒɔɪnt/',d:'shared by or belonging to two or more people.',e:'She and Frank had never got around to opening a ___ account.',e2:'She and Frank had never got around to opening a **joint** account.'},
+{w:'recur',p:'v.',ipa:'/rɪˈkɜːr/',d:'to happen again or a number of times',e:'This theme ___ several times throughout the book.',e2:'This theme **recurs** several times throughout the book.'},
+{w:'discard',p:'v.',ipa:'/dɪsˈkɑːrd/',d:'to get rid of sth that you no longer want or need',e:'The room was littered with ___ newspapers.',e2:'The room was littered with **discarded** newspapers.'},
+{w:'dissolve',p:'adj./v./n.',ipa:'/dɪˈzɒlv/',d:'( of a solid ) to mix with a liquid and become part of it',e:'Their marriage was ___ in 1999.',e2:'Their marriage was **dissolved** in 1999.'},
+{w:'accumulate',p:'v.',ipa:'/əˈkjuːmjəleɪt/',d:'to gradually get more and more of sth over a period of time',e:'I seem to have ___ a lot of books.',e2:'I seem to have **accumulated** a lot of books.'},
+{w:'decisive',p:'adj.',ipa:'/dɪˈsaɪsɪv/',d:'very important for the final result of a particular situation',e:'She has played a ___ role in the peace negotiations.',e2:'She has played a **decisive** role in the peace negotiations.'},
+{w:'heterogenous',p:'adj.',ipa:'/ˌhɛtəˈrɒdʒɪnəs/',d:'not originating within the body; of foreign origin',e:'The genetics of AD is ___ and complex.',e2:'The genetics of AD is **heterogenous** and complex.'},
+{w:'entrust',p:'v.',ipa:'/ɪnˈtrʌst/',d:'to make sb responsible for doing sth or taking care of sb',e:'He ___ the task to his nephew.',e2:'He **entrusted** the task to his nephew.'},
+{w:'allude',p:'v.',ipa:'/əˈluːd/',d:'If you allude to something, you mention it in an indirect way.',e:'With friends, she sometimes ___ to a feeling that she herself was to blame for her son\'s predicament.',e2:'With friends, she sometimes **alluded** to a feeling that she herself was to blame for her son\'s predicament.'},
+{w:'subvert',p:'v.',ipa:'/səbˈvɜːrt/',d:'to try to destroy the authority of a political, religious, etc. system by attacking it secretly or indirectly',e:'an alleged plot to ___ the state.',e2:'an alleged plot to **subvert** the state.'},
+{w:'congruous',p:'adj.',ipa:'/ˈkɒŋɡruəs/',d:'corresponding or agreeing',e:'Your behaviour is not ___ with your rank.',e2:'Your behaviour is not **congruous** with your rank.'},
+{w:'anvil',p:'n.',ipa:'/ˈænvɪl/',d:'An anvil is a heavy iron block on which hot metals are beaten into shape.',e:'The blacksmith hammered the glowing metal on the ___.',e2:'The blacksmith hammered the glowing metal on the **anvil**.'},
+{w:'strife',p:'adj./v./n.',ipa:'/straɪf/',d:'angry or violent disagreement between two people or groups of people',e:'The country was torn apart by ___.',e2:'The country was torn apart by **strife**.'},
+{w:'shelter',p:'n.',ipa:'/ˈʃɛltər/',d:'the fact of having a place to live or stay, considered as a basic human need',e:'Human beings need food, clothing and ___.',e2:'Human beings need food, clothing and **shelter**.'},
+{w:'hold up',p:'adj./v./n.',ipa:'/hoʊld ʌp/',d:'If you hold up your hand or something you have in your hand, you move it upward into a particular position and keep it there.',e:'The old bridge has ___ well despite decades of heavy traffic.',e2:'The old bridge has held up well despite decades of heavy traffic.'},
+{w:'apathy',p:'n.',ipa:'/ˈæpəθi/',d:'the feeling of not being interested in or enthusiastic about anything',e:'There is widespread ___ among the electorate.',e2:'There is widespread **apathy** among the electorate.'},
+{w:'indoctrinate',p:'v.',ipa:'/ɪnˈdɒktrɪneɪt/',d:'to force sb to accept a particular belief or set of beliefs and not allow them to consider any others',e:'They had been ___ from an early age with their parents\' beliefs.',e2:'They had been **indoctrinated** from an early age with their parents\' beliefs.'},
+{w:'expound',p:'v.',ipa:'/ɪkˈspaʊnd/',d:'to explain sth by talking about it in detail',e:'We listened as she ___ on the government\'s new policies.',e2:'We listened as she **expounded** on the government\'s new policies.'},
+{w:'protract',p:'v.',ipa:'/proʊˈtrækt/',d:'to lengthen or extend (a speech, etc); prolong in time',e:'Let\'s not ___ the debate any further.',e2:'Let\'s not **protract** the debate any further.'},
+{w:'elide',p:'adj./v./n.',ipa:'/ɪˈlaɪd/',d:'If you elide something, especially a distinction, you leave it out or ignore it.',e:'These habits of thinking ___ the difference between what is common and what is normal.',e2:'These habits of thinking **elide** the difference between what is common and what is normal.'},
+{w:'implausible',p:'adj.',ipa:'/ɪmˈplɔːzəbəl/',d:'not seeming reasonable or likely to be true',e:'an ___ claim/idea/theory',e2:'an **implausible** claim/idea/theory'},
+{w:'unflattering',p:'adj./v./n.',ipa:'/ʌnˈflætərɪŋ/',d:'making sb/sth seem worse or less attractive than they really are',e:'an ___ dress',e2:'an **unflattering** dress'},
+{w:'cliché',p:'n.',ipa:'/kliːˈʃeɪ/',d:'a phrase or an idea that has been used so often that it no longer has much meaning and is not interesting',e:'She trotted out the old ___́ that ‘a trouble shared is a trouble halved.’',e2:'She trotted out the old **cliche**́ that ‘a trouble shared is a trouble halved.’'},
+{w:'invaluable',p:'adj.',ipa:'/ɪnˈvæljəbəl/',d:'extremely useful',e:'___ means ‘very valuable or useful’.',e2:'**Invaluable** means ‘very valuable or useful’.'},
+{w:'replicate',p:'v.',ipa:'/ˈrɛplɪkeɪt/',d:'to copy sth exactly',e:'Subsequent experiments failed to ___ these findings.',e2:'Subsequent experiments failed to **replicate** these findings.'},
+{w:'shrewd',p:'adj./v./n.',ipa:'/ʃruːd/',d:'clever at understanding and making judgements about a situation',e:'a ___ businessman',e2:'a **shrewd** businessman'},
+{w:'unassuming',p:'adj./v./n.',ipa:'/ˌʌnəˈsuːmɪŋ/',d:'not wanting to draw attention to yourself or to your abilities or status',e:'He\'s a man of few words, very polite and ___.',e2:'He\'s a man of few words, very polite and **unassuming**.'},
+{w:'intrinsic',p:'adj.',ipa:'/ɪnˈtrɪnsɪk/',d:'belonging to or part of the real nature of sth/sb',e:'the ___ value of education',e2:'the **intrinsic** value of education'},
+{w:'subordinate',p:'adj.',ipa:'/səˈbɔːrdɪnət/',d:'having less power or authority than sb else in a group or an organization',e:'In many societies women are ___ to men.',e2:'In many societies women are **subordinate** to men.'},
+{w:'duplicate',p:'v.',ipa:'/ˈdjuːplɪkeɪt/',d:'to do sth again, especially when it is unnecessary',e:'There\'s no point in ___ work already done.',e2:'There\'s no point in **duplicating** work already done.'},
+{w:'recollect',p:'v.',ipa:'/ˌrɛkəˈlɛkt/',d:'to remember sth, especially by making an effort to remember it',e:'She could no longer ___ the details of the letter.',e2:'She could no longer **recollect** the details of the letter.'},
+{w:'bypass',p:'v.',ipa:'/ˈbaɪpæs/',d:'to go around or avoid a place',e:'A new road now ___ the town.',e2:'A new road now **bypasses** the town.'},
+{w:'overwhelm',p:'v.',ipa:'/ˌoʊvərˈwɛlm/',d:'to have such a strong emotional effect on sb that it is difficult for them to resist or know how to react',e:'She was ___ by feelings of guilt.',e2:'She was **overwhelmed** by feelings of guilt.'},
+{w:'designate',p:'v.',ipa:'/ˈdɛzɪɡneɪt/',d:'to say officially that sth has a particular character or name; to describe sth in a particular way',e:'This area has been ___ (as) a National Park.',e2:'This area has been **designated** (as) a National Park.'},
+{w:'discount',p:'v.',ipa:'/ˈdɪskaʊnt/',d:'to think or say that sth is not important or not true',e:'We cannot ___ the possibility of further strikes.',e2:'We cannot **discount** the possibility of further strikes.'},
+{w:'nullify',p:'v.',ipa:'/ˈnʌlɪfaɪ/',d:'to make sth such as an agreement or order lose its legal force',e:'Judges were unwilling to ___ government decisions.',e2:'Judges were unwilling to **nullify** government decisions.'},
+{w:'outstrip',p:'v.',ipa:'/aʊtˈstrɪp/',d:'to become larger, more important, etc. than sb/sth',e:'Demand is ___ supply.',e2:'Demand is **outstripping** supply.'},
+{w:'stymie',p:'v.',ipa:'/ˈstaɪmi/',d:'to prevent sb from doing sth that they have planned or want to do; to prevent sth from happening',e:'Companies have been ___ by the length of time it takes to reach an agreement.',e2:'Companies have been **stymied** by the length of time it takes to reach an agreement.'},
+{w:'obligate',p:'v.',ipa:'/ˈɒblɪɡeɪt/',d:'If something obligates you to do a particular thing, it creates a situation where you have to do it.',e:'The ruling ___ airlines to release information about their flight delays.',e2:'The ruling **obligates** airlines to release information about their flight delays.'},
+{w:'reserved',p:'adj./v./n.',ipa:'/rɪˈzɜːrvd/',d:'slow or unwilling to show feelings or express opinions',e:'He was unemotional, quiet, and ___.',e2:'He was unemotional, quiet, and **reserved**.'},
+{w:'inhibite',p:'adj./v./n.',ipa:'/ɪnˈhɪbɪt/',d:'unable to relax or express your feelings in a natural way',e:'Boys are often more ___ than girls about discussing their problems.',e2:'Boys are often more **inhibited** than girls about discussing their problems.'},
+{w:'explicable',p:'adj.',ipa:'/ɪkˈsplɪkəbəl/',d:'that can be explained or understood',e:'His behaviour is only ___ in terms of (= because of) his recent illness.',e2:'His behaviour is only **explicable** in terms of (= because of) his recent illness.'},
+{w:'intangible',p:'adj.',ipa:'/ɪnˈtændʒəbəl/',d:'that exists but that is difficult to describe, understand or measure',e:'The old building had an ___ air of sadness about it.',e2:'The old building had an **intangible** air of sadness about it.'},
+{w:'indulgent',p:'adj.',ipa:'/ɪnˈdʌldʒənt/',d:'tending to allow sb to have or do whatever they want',e:'___ parents',e2:'**indulgent** parents'},
+{w:'enlist',p:'v.',ipa:'/ɪnˈlɪst/',d:'to persuade sb to help you or to join you in doing sth',e:'They hoped to ___ the help of the public in solving the crime',e2:'They hoped to **enlist** the help of the public in solving the crime'},
+{w:'precipitate',p:'v.',ipa:'/prɪˈsɪpɪteɪt/',d:'to make sth, especially sth bad, happen suddenly or sooner than it should',e:'His resignation ___ a leadership crisis.',e2:'His resignation **precipitated** a leadership crisis.'},
+{w:'dispassionate',p:'adj./v./n.',ipa:'/dɪsˈpæʃənət/',d:'not influenced by emotion',e:'taking a calm, ___ view of the situation',e2:'taking a calm, **dispassionate** view of the situation'},
+{w:'lighthearted',p:'adj./v./n.',ipa:'/ˈlaɪtˌhɑːrtɪd/',d:'free from care, anxiety,or seriousness',e:'But the ___ drama would end in tragedy.',e2:'But the **lighthearted** drama would end in tragedy.'},
+{w:'brood',p:'adj./v./n.',ipa:'/bruːd/',d:'~ (over/on/about sth)to think a lot about sth that makes you annoyed, anxious or upset',e:'You\'re not still ___ over what he said, are you?',e2:'You\'re not still **brooding** over what he said, are you?'},
+{w:'oversee',p:'v.',ipa:'/ˌoʊvərˈsiː/',d:'to watch sb/sth and make sure that a job or an activity is done correctly',e:'Use a surveyor or architect to ___ and inspect the different stages of the work.',e2:'Use a surveyor or architect to **oversee** and inspect the different stages of the work.'},
+{w:'esteem',p:'adj./v./n.',ipa:'/ɪˈstiːm/',d:'great respect and admiration; a good opinion of sb',e:'She is held in high ___ by her colleagues.',e2:'She is held in high **esteem** by her colleagues.'},
+{w:'arduous',p:'adj.',ipa:'/ˈɑːrdʒuəs/',d:'involving a lot of effort and energy, especially over a period of time',e:'an ___ journey across the Andes',e2:'an **arduous** journey across the Andes'},
+{w:'substitute',p:'n.',ipa:'/ˈsʌbstɪtjuːt/',d:'a person or thing that you use or have instead of the one you normally use or have',e:'Paul\'s father only saw him as a ___ for his dead brother.',e2:'Paul\'s father only saw him as a **substitute** for his dead brother.'},
+{w:'exemplify',p:'v.',ipa:'/ɪɡˈzɛmplɪfaɪ/',d:'to be a typical example of sth',e:'His food ___ Italian cooking at its best.',e2:'His food **exemplifies** Italian cooking at its best.'},
+{w:'summation',p:'n.',ipa:'/sʌˈmeɪʃən/',d:'a summary of what has been done or said',e:'What he said was a fair ___ of the discussion.',e2:'What he said was a fair **summation** of the discussion.'},
+{w:'respectable',p:'adj.',ipa:'/rɪˈspɛktəbəl/',d:'considered by society to be acceptable, good or correct',e:'a highly ___ neighbourhood',e2:'a highly **respectable** neighbourhood'},
+{w:'counterfactual',p:'adj.',ipa:'/ˌkaʊntərˈfæktʃuəl/',d:'expressing what has not happened but could, would, or might under differing conditions',e:'The historian explored a ___ scenario in which the treaty was never signed.',e2:'The historian explored a **counterfactual** scenario in which the treaty was never signed.'},
+{w:'aesthetics',p:'n.',ipa:'/ɛsˈθɛtɪks/',d:'a branch of philosophy concerned with the study of the idea of beauty',e:'The architect cared deeply about the ___ of the building.',e2:'The architect cared deeply about the **aesthetics** of the building.'},
+{w:'intermediate',p:'adj./v./n.',ipa:'/ˌɪntərˈmiːdiət/',d:'~ (between A and B)located between two places, things, states, etc.',e:'an ___ stage/step in a process',e2:'an **intermediate** stage/step in a process'},
+{w:'oddity',p:'n.',ipa:'/ˈɒdɪti/',d:'a person or thing that is strange or unusual',e:'The book deals with some of the ___ of grammar and spelling.',e2:'The book deals with some of the **oddities** of grammar and spelling.'},
+{w:'considerable',p:'adj.',ipa:'/kənˈsɪdərəbəl/',d:'great in amount, size, importance, etc.',e:'The project wasted a ___ amount of time and money.',e2:'The project wasted a **considerable** amount of time and money.'},
+{w:'outsize',p:'adj./v./n.',ipa:'/ˈaʊtsaɪz/',d:'larger than the usual size',e:'an ___ desk',e2:'an **outsize** desk'},
+{w:'erratic',p:'adj.',ipa:'/ɪˈrætɪk/',d:'not happening at regular times; not following any plan or regular pattern; that you cannot rely on',e:'The electricity supply here is quite ___.',e2:'The electricity supply here is quite **erratic**.'},
+{w:'satirize',p:'adj./v./n.',ipa:'/ˈsætəraɪz/',d:'use satire to criticize them or make fun of them in a play, movie, or novel.',e:'The comedian loved to ___ politicians in his late-night monologues.',e2:'The comedian loved to satirize politicians in his late-night monologues.'},
+{w:'solidify',p:'v.',ipa:'/səˈlɪdɪfaɪ/',d:'to become solid; to make sth solid',e:'The mixture will ___ into toffee.',e2:'The mixture will **solidify** into toffee.'},
+{w:'contemplate',p:'v.',ipa:'/ˈkɒntəmpleɪt/',d:'to think about whether you should do sth, or how you should do sth',e:'You\'re too young to be ___ retirement',e2:'You\'re too young to be **contemplating** retirement'},
+{w:'impartial',p:'adj.',ipa:'/ɪmˈpɑːrʃəl/',d:'not supporting one person or group more than another',e:'to give ___ advice',e2:'to give **impartial** advice'},
+{w:'foresight',p:'n.',ipa:'/ˈfɔːrsaɪt/',d:'the ability to predict what is likely to happen and to use this to prepare for the future',e:'She had had the ___ to prepare herself financially in case of an accident.',e2:'She had had the **foresight** to prepare herself financially in case of an accident.'},
+{w:'unnerve',p:'v.',ipa:'/ʌnˈnɜːrv/',d:'to make sb feel nervous or frightened or lose confidence',e:'His silence ___ us.',e2:'His silence **unnerved** us.'},
+{w:'prioritize',p:'v.',ipa:'/praɪˈɒrɪtaɪz/',d:'to put tasks, problems, etc. in order of importance, so that you can deal with the most important first',e:'You should make a list of all the jobs you have to do and ___ them.',e2:'You should make a list of all the jobs you have to do and **prioritize** them.'},
+{w:'subside',p:'v.',ipa:'/səbˈsaɪd/',d:'to become calmer or quieter',e:'She waited nervously for his anger to ___',e2:'She waited nervously for his anger to **subside**'},
+{w:'rejuvenate',p:'v.',ipa:'/rɪˈdʒuːvəneɪt/',d:'to make sb/sth look or feel younger or more lively',e:'Shelley was advised that the Italian climate would ___ him.',e2:'Shelley was advised that the Italian climate would **rejuvenate** him.'},
+{w:'converge',p:'adj./v./n.',ipa:'/kənˈvɜːrdʒ/',d:'( of people or vehicles ) to move towards a place from different directions and meet',e:'Thousands of supporters ___ on London for the rally.',e2:'Thousands of supporters **converged** on London for the rally.'},
+{w:'prank',p:'n.',ipa:'/præŋk/',d:'a trick that is played on sb as a joke',e:'a childish ___',e2:'a childish **prank**'},
+{w:'revelation',p:'n.',ipa:'/ˌrɛvəˈleɪʃən/',d:'a fact that people are made aware of, especially one that has been secret and is surprising',e:'startling/sensational ___ about her private life',e2:'startling/sensational **revelations** about her private life'},
+{w:'amass',p:'v.',ipa:'/əˈmæs/',d:'to collect sth, especially in large quantities',e:'He ___ a fortune from silver mining.',e2:'He **amassed** a fortune from silver mining.'},
+{w:'intercede',p:'v.',ipa:'/ˌɪntərˈsiːd/',d:'to speak to sb in order to persuade them to show pity on sb else or to help settle an argument',e:'They asked my father to ___ with the king on their behalf.',e2:'They asked my father to **intercede** with the king on their behalf.'},
+{w:'petition',p:'n.',ipa:'/pəˈtɪʃən/',d:'a written document signed by a large number of people that asks sb in a position of authority to do or change sth',e:'a ___ against experiments on animals',e2:'a **petition** against experiments on animals'},
+{w:'trivial',p:'adj.',ipa:'/ˈtrɪviəl/',d:'not important or serious; not worth considering',e:'a ___ detai',e2:'a **trivial** detai'},
+{w:'permissible',p:'adj.',ipa:'/pərˈmɪsəbəl/',d:'acceptable according to the law or a particular set of rules',e:'It is not ___ for employers to discriminate on grounds of age.',e2:'It is not **permissible** for employers to discriminate on grounds of age.'},
+{w:'feasible',p:'adj.',ipa:'/ˈfiːzəbəl/',d:'that is possible and likely to be achieved',e:'a ___ plan/suggestion/idea',e2:'a **feasible** plan/suggestion/idea'},
+{w:'selective',p:'adj.',ipa:'/sɪˈlɛktɪv/',d:'affecting or concerned with only a small number of people or things from a larger group',e:'___ strike action',e2:'**selective** strike action'},
+{w:'mandatory',p:'adj.',ipa:'/ˈmændətɔːri/',d:'required by law',e:'the ___ retirement age of 65',e2:'the **mandatory** retirement age of 65'},
+{w:'conflate',p:'v.',ipa:'/kənˈfleɪt/',d:'to put two or more things together to make one new thing',e:'Unfortunately the public ___ fiction with reality and made her into a saint.',e2:'Unfortunately the public **conflated** fiction with reality and made her into a saint.'},
+{w:'demarcate',p:'v.',ipa:'/ˈdiːmɑːrkeɪt/',d:'to mark or establish the limits of sth',e:'Plots of land have been ___ by barbed wire.',e2:'Plots of land have been **demarcated** by barbed wire.'},
+{w:'reconstitute',p:'v.',ipa:'/riːˈkɒnstɪtjuːt/',d:'to form an organization or a group again in a different way',e:'The group ___ itself as a political party.',e2:'The group **reconstituted** itself as a political party.'},
+{w:'ambiguity',p:'n.',ipa:'/ˌæmbɪˈɡjuːəti/',d:'the state of having more than one possible meaning',e:'Write clear definitions in order to avoid ___.',e2:'Write clear definitions in order to avoid **ambiguity**.'},
+{w:'disengage',p:'v.',ipa:'/ˌdɪsɪnˈɡeɪdʒ/',d:'to free sb/sth from the person or thing that is holding them or it; to become free',e:'She gently ___ herself from her sleeping son.',e2:'She gently **disengaged** herself from her sleeping son.'},
+{w:'impart',p:'v.',ipa:'/ɪmˈpɑːrt/',d:'to pass information, knowledge, etc. to other people',e:'The spice ___ an Eastern flavour to the dish.',e2:'The spice **imparts** an Eastern flavour to the dish.'},
+{w:'assent',p:'adj.',ipa:'/əˈsɛnt/',d:'official agreement to or approval of sth',e:'The director has given her ___ to the proposals.',e2:'The director has given her **assent** to the proposals.'},
+{w:'renounce',p:'v.',ipa:'/rɪˈnaʊns/',d:'to state officially that you are no longer going to keep a title, position, etc.',e:'to ___ a claim/title/privilege/right',e2:'to **renounce** a claim/title/privilege/right'},
+{w:'notional',p:'adj.',ipa:'/ˈnoʊʃənəl/',d:'based on a guess, estimate or theory; not existing in reality',e:'That meant that he, ___ at least, outranked them all.',e2:'That meant that he, **notionally** at least, outranked them all.'},
+{w:'desultory',p:'adj.',ipa:'/ˈdɛsəltɔːri/',d:'going from one thing to another, without a definite plan and without enthusiasm',e:'I wandered about in a ___ fashion.',e2:'I wandered about in a **desultory** fashion.'},
+{w:'misanthropic',p:'adj.',ipa:'/ˌmɪsənˈθrɒpɪk/',d:'hating and avoiding other people',e:'He was paranoid, self-obsessed and ___.',e2:'He was paranoid, self-obsessed and **misanthropic**.'},
+{w:'trickery',p:'n.',ipa:'/ˈtrɪkəri/',d:'the use of dishonest methods to trick people in order to achieve what you want',e:'The book just tells you the ordinary event which is really ___.',e2:'The book just tells you the ordinary event which is really **trickery**.'},
+{w:'bestow',p:'v.',ipa:'/bɪˈstoʊ/',d:'to give sth to sb, especially to show how much they are respected',e:'It was a title ___ upon him by the king.',e2:'It was a title **bestowed** upon him by the king.'},
+{w:'wrought',p:'adj./v./n.',ipa:'/rɔːt/',d:'caused sth to happen, especially a change',e:'This century ___ major changes in our society.',e2:'This century **wrought** major changes in our society.'},
+{w:'opportune',p:'adj./v./n.',ipa:'/ˌɒpərˈtjuːn/',d:'( of a time ) suitable for doing a particular thing, so that it is likely to be successful',e:'The offer could not have come at a more ___ moment.',e2:'The offer could not have come at a more **opportune** moment.'},
+{w:'lean',p:'v.',ipa:'/liːn/',d:'to bend or move from a vertical position',e:'I ___ back in my chair.',e2:'I **leaned** back in my chair.'},
+{w:'tip',p:'v.',ipa:'/tɪp/',d:'to move so that one end or side is higher than the other; to move sth into this position',e:'The boat ___ to one side.',e2:'The boat **tipped** to one side.'},
+{w:'unfailing',p:'adj./v./n.',ipa:'/ʌnˈfeɪlɪŋ/',d:'that you can rely on to always be there and always be the same',e:'She fought the disease with ___ good humour.',e2:'She fought the disease with **unfailing** good humour.'},
+{w:'grudge',p:'v.',ipa:'/ɡrʌdʒ/',d:'to do or give sth unwillingly',e:'I ___ having to pay so much tax.',e2:'I **grudge** having to pay so much tax.'},
+{w:'subtlety',p:'n.',ipa:'/ˈsʌtəlti/',d:'the quality of being subtle',e:'It\'s a thrilling movie even though it lacks ___.',e2:'It\'s a thrilling movie even though it lacks **subtlety**.'},
+{w:'insurmountable',p:'adj.',ipa:'/ˌɪnsərˈmaʊntəbəl/',d:'( of difficulties, problems, etc. ) that cannot be dealt with successfully',e:'The crisis doesn\'t seem like an ___ problem.',e2:'The crisis doesn\'t seem like an **insurmountable** problem.'},
+{w:'yearn',p:'v.',ipa:'/jɜːrn/',d:'to want sth very much, especially when it is very difficult to get',e:'The people ___ for peace.',e2:'The people **yearned** for peace.'},
+{w:'underscore',p:'adj./v./n.',ipa:'/ˌʌndərˈskɔːr/',d:'If something such as an action or an event underscores another, it draws attention to the other thing and emphasizes its importance.',e:'The Labour Department figures ___ the shaky state of the economic recovery.',e2:'The Labour Department figures **underscore** the shaky state of the economic recovery.'},
+{w:'relinquish',p:'v.',ipa:'/rɪˈlɪŋkwɪʃ/',d:'to stop having sth, especially when this happens unwillingly',e:'He was forced to ___ control of the company.',e2:'He was forced to **relinquish** control of the company.'},
+{w:'infraction',p:'n.',ipa:'/ɪnˈfrækʃən/',d:'an act of breaking a rule or law',e:'an ___ of school rules',e2:'an **infraction** of school rules'},
+{w:'mischievous',p:'adj.',ipa:'/ˈmɪstʃɪvəs/',d:'enjoying playing tricks and annoying people',e:'a ___ boy',e2:'a **mischievous** boy'},
+{w:'fraudulent',p:'adj.',ipa:'/ˈfrɔːdʒələnt/',d:'intended to cheat sb, usually in order to make money illegally',e:'The company was accused of ___ advertising.',e2:'The company was accused of fraudulent advertising.'},
+{w:'authentic',p:'adj.',ipa:'/ɔːˈθɛntɪk/',d:'known to be real and genuine and not a copy',e:'I don\'t know if the painting is ___.',e2:'I don\'t know if the painting is **authentic**.'},
+{w:'hoax',p:'n.',ipa:'/hoʊks/',d:'an act intended to make sb believe sth that is not true, especially sth unpleasant',e:'The viral video turned out to be an elaborate ___.',e2:'The viral video turned out to be an elaborate **hoax**.'},
+{w:'surpass',p:'v.',ipa:'/sərˈpæs/',d:'to do or be better than sb/sth',e:'He hopes one day to ___ the world record.',e2:'He hopes one day to **surpass** the world record.'},
+{w:'evident',p:'adj.',ipa:'/ˈɛvɪdənt/',d:'clear; easily seen',e:'It has now become ___ to us that a mistake has been made.',e2:'It has now become **evident** to us that a mistake has been made.'},
+{w:'precedent',p:'n.',ipa:'/ˈprɛsɪdənt/',d:'a similar action or event that happened earlier',e:'The court ruling relied heavily on historical ___.',e2:'The court ruling relied heavily on historical precedents.'},
+{w:'ignoble',p:'adj./v./n.',ipa:'/ɪɡˈnoʊbəl/',d:'not good or honest; that should make you feel shame',e:'___ thoughts',e2:'**ignoble** thoughts'},
+{w:'entice',p:'v.',ipa:'/ɪnˈtaɪs/',d:'to persuade sb/sth to go somewhere or to do sth, usually by offering them sth',e:'The bargain prices are expected to ___ customers away from other stores.',e2:'The bargain prices are expected to **entice** customers away from other stores.'},
+{w:'envision',p:'v.',ipa:'/ɪnˈvɪʒən/',d:'to imagine what a situation will be like in the future, especially a situation you intend to work towards',e:'They ___ an equal society, free of poverty and disease.',e2:'They **envision** an equal society, free of poverty and disease.'},
+{w:'dwindle',p:'v.',ipa:'/ˈdwɪndəl/',d:'to become gradually less or smaller',e:'Membership of the club has ___ from 70 to 20.',e2:'Membership of the club has **dwindled** from 70 to 20.'},
+{w:'contemptuous',p:'adj.',ipa:'/kənˈtɛmptʃuəs/',d:'feeling or showing that you have no respect for sb/sth',e:'She gave him a ___ look.',e2:'She gave him a **contemptuous** look.'},
+{w:'disastrous',p:'adj.',ipa:'/dɪˈzæstrəs/',d:'very bad, harmful or unsuccessful',e:'a ___ harvest/fire/result',e2:'a **disastrous** harvest/fire/result'},
+{w:'melancholy',p:'n.',ipa:'/ˈmɛlənkɒli/',d:'a deep feeling of sadness that lasts for a long time and often cannot be explained',e:'A mood of ___ descended on us.',e2:'A mood of **melancholy** descended on us.'},
+{w:'monotony',p:'adj.',ipa:'/məˈnɒtəni/',d:'boring lack of variety',e:'She watches television to relieve the ___ of everyday life.',e2:'She watches television to relieve the **monotony** of everyday life.'},
+{w:'pique',p:'adj./v./n.',ipa:'/piːk/',d:'annoyed or bitter feelings that you have, usually because your pride has been hurt',e:'When he realized nobody was listening to him, he left in a fit of ___.',e2:'When he realized nobody was listening to him, he left in a fit of **pique**.'},
+{w:'presuppose',p:'v.',ipa:'/ˌpriːsəˈpoʊz/',d:'to accept sth as true or existing and act on that basis, before it has been proved to be true',e:'Teachers sometimes ___ a fairly high level of knowledge by the students.',e2:'Teachers sometimes **presuppose** a fairly high level of knowledge by the students.'},
+{w:'redolent',p:'adj.',ipa:'/ˈrɛdələnt/',d:'making you think of the thing mentioned',e:'an atmosphere ___ of the sea and ships',e2:'an atmosphere **redolent** of the sea and ships'},
+{w:'viable',p:'adj.',ipa:'/ˈvaɪəbəl/',d:'that can be done; that will be successful',e:'a ___ option/proposition',e2:'a **viable** option/proposition'},
+{w:'buoy',p:'v.',ipa:'/ˈbuːi/',d:'to make sb feel cheerful or confident',e:'___ by their win yesterday the team feel confident of further success.',e2:'**Buoyed** by their win yesterday the team feel confident of further success.'},
+{w:'unrivaled',p:'adj.',ipa:'/ʌnˈraɪvəld/',d:'having no rival',e:'The views afforded here are ___.',e2:'The views afforded here are **unrivaled**.'},
+{w:'revision',p:'n.',ipa:'/rɪˈvɪʒən/',d:'a change or set of changes to sth',e:'He made some minor ___ to the report before printing it out.',e2:'He made some minor **revisions** to the report before printing it out.'},
+{w:'emblematic',p:'adj.',ipa:'/ˌɛmbləˈmætɪk/',d:'that represents or is a symbol of sth',e:'Dogs are ___ of faithfulness.',e2:'Dogs are **emblematic** of faithfulness.'},
+{w:'static',p:'adj.',ipa:'/ˈstætɪk/',d:'not moving, changing or developing',e:'Prices on the stock market, which have been ___, are now rising again.',e2:'Prices on the stock market, which have been **static**, are now rising again.'},
+{w:'apprehension',p:'n.',ipa:'/ˌæprɪˈhɛnʃən/',d:'worry or fear that sth unpleasant may happen',e:'There is growing ___ that fighting will begin again.',e2:'There is growing **apprehension** that fighting will begin again.'},
+{w:'encapsulate',p:'v.',ipa:'/ɪnˈkæpsjəleɪt/',d:'to express the most important parts of sth in a few words, a small space or a single object',e:'The poem ___ many of the central themes of her writing.',e2:'The poem **encapsulates** many of the central themes of her writing.'},
+{w:'nonchalanct',p:'adj./v./n.',ipa:'/ˌnɒnʃəˈlɑːnt/',d:'behaving in a calm and relaxed way; giving the impression that you are not feeling any anxiety',e:'‘It\'ll be fine,’ she replied, with a ___ shrug.',e2:'‘It\'ll be fine,’ she replied, with a **nonchalant** shrug.'},
+{w:'perturbation',p:'n.',ipa:'/ˌpɜːrtərˈbeɪʃən/',d:'the state of feeling anxious about sth that has happened',e:'This message caused ___ in the Middle East Headquarters.',e2:'This message caused **perturbation** in the Middle East Headquarters.'},
+{w:'indolence',p:'n.',ipa:'/ˈɪndələns/',d:'laziness',e:'We also don\'t want to subsidize the ___ of people who are too lazy to work.',e2:'We also don\'t want to subsidize the **indolence** of people who are too lazy to work.'},
+{w:'abatement',p:'n.',ipa:'/əˈbeɪtmənt/',d:'a reduction in the strength or power of something or the reduction of it',e:'...the ___ of carbon dioxide emissions.',e2:'...the **abatement** of carbon dioxide emissions.'},
+{w:'unfold',p:'v.',ipa:'/ʌnˈfoʊld/',d:'to spread open or flat sth that has previously been folded; to become open and flat',e:'She ___ her arms.',e2:'She **unfolded** her arms.'},
+{w:'enact',p:'v.',ipa:'/ɪnˈækt/',d:'to pass a law',e:'legislation ___ by parliament',e2:'legislation **enacted** by parliament'},
+{w:'consideration',p:'n.',ipa:'/kənˌsɪdəˈreɪʃən/',d:'the quality of being sensitive towards others and thinking about their wishes and feelings',e:'They showed no ___ whatsoever for my feelings.',e2:'They showed no **consideration** whatsoever for my feelings.'},
+{w:'wince',p:'v.',ipa:'/wɪns/',d:'to suddenly make an expression with your face that shows that you are feeling pain or embarrassment',e:'He ___ as a sharp pain shot through his left leg.',e2:'He **winced** as a sharp pain shot through his left leg.'},
+{w:'affectionate',p:'adj./v./n.',ipa:'/əˈfɛkʃənət/',d:'showing caring feelings and love for sb',e:'He is very ___ towards his children.',e2:'He is very **affectionate** towards his children.'},
+{w:'resumption',p:'n.',ipa:'/rɪˈzʌmpʃən/',d:'the act of beginning sth again after it has stopped',e:'We are hoping for an early ___ of peace talks.',e2:'We are hoping for an early **resumption** of peace talks.'},
+{w:'enumerate',p:'v.',ipa:'/ɪˈnjuːməreɪt/',d:'to name things on a list one by one',e:'I ___ the work that will have to be done.',e2:'I **enumerate** the work that will have to be done.'},
+{w:'immoderate',p:'adj./v./n.',ipa:'/ɪˈmɒdərət/',d:'extreme; not reasonable',e:'___ drinking',e2:'**immoderate** drinking'},
+{w:'attrition',p:'n.',ipa:'/əˈtrɪʃən/',d:'a process of making sb/sth, especially your enemy, weaker by repeatedly attacking them or creating problems for them',e:'It was a war of ___',e2:'It was a war of **attrition**'},
+{w:'circumspection',p:'n.',ipa:'/ˌsɜːrkəmˈspɛkʃən/',d:'cautious behaviour and a refusal to take risks.',e:'This is a region to be treated with ___.',e2:'This is a region to be treated with **circumspection**.'},
+{w:'disentangle',p:'adj./v./n.',ipa:'/ˌdɪsɪnˈtæŋɡəl/',d:'~ sth (from sth)to separate different arguments, ideas, etc. that have become confused',e:'It\'s not easy to ___ the truth from the official statistics.',e2:'It\'s not easy to **disentangle** the truth from the official statistics.'},
+{w:'sound',p:'adj./v./n.',ipa:'/saʊnd/',d:'sensible; that you can rely on and that will probably give good results',e:'a person of ___ judgement',e2:'a person of **sound** judgement'},
+{w:'dawdle',p:'v.',ipa:'/ˈdɔːdəl/',d:'to take a long time to do sth or go somewhere',e:'Stop ___!',e2:'Stop **dawdling**!'},
+{w:'justification',p:'n.',ipa:'/ˌdʒʌstɪfɪˈkeɪʃən/',d:'a good reason why sth exists or is done',e:'I can see no possible ___ for any further tax increases.',e2:'I can see no possible **justification** for any further tax increases.'},
+{w:'resolution',p:'n.',ipa:'/ˌrɛzəˈluːʃən/',d:'the act of solving or settling a problem, disagreement, etc.',e:'The government is pressing for an early ___ of the dispute.',e2:'The government is pressing for an early **resolution** of the dispute.'},
+{w:'decouple',p:'v.',ipa:'/diːˈkʌpəl/',d:'to end the connection or relationship between two things',e:'a conception which ___ culture and politic',e2:'a conception which **decouples** culture and politic'},
+{w:'defy',p:'v.',ipa:'/dɪˈfaɪ/',d:'to refuse to obey or show respect for sb in authority, a law, a rule, etc.',e:'I wouldn\'t have dared to ___ my teachers.',e2:'I wouldn\'t have dared to **defy** my teachers.'},
+{w:'infinity',p:'n.',ipa:'/ɪnˈfɪnəti/',d:'a number that is larger than any other number and can never be given an exact value.',e:'These permutations multiply toward ___.',e2:'These permutations multiply toward **infinity**.'},
+{w:'materialism',p:'n.',ipa:'/məˈtɪriəlɪzəm/',d:'the attitude of someone who attaches a lot of importance to money and wants to possess a lot of material things.',e:'...the rising consumer ___ in society at large.',e2:'...the rising consumer **materialism** in society at large.'},
+{w:'prosperous',p:'adj.',ipa:'/ˈprɒspərəs/',d:'people, places, and economies are rich and successful.',e:'...the youngest son of a relatively ___ family.',e2:'...the youngest son of a relatively **prosperous** family.'},
+{w:'enigma',p:'n.',ipa:'/ɪˈnɪɡmə/',d:'a person, thing or situation that is mysterious and difficult to understand',e:'Iran remains an ___ for the outside world.',e2:'Iran remains an **enigma** for the outside world.'},
+{w:'culminate',p:'v.',ipa:'/ˈkʌlmɪneɪt/',d:'to end with a particular result, or at a particular point',e:'a gun battle which ___ in the death of two police officers',e2:'a gun battle which **culminated** in the death of two police officers'},
+{w:'rigor',p:'n.',ipa:'/ˈrɪɡər/',d:'the fact of being careful and paying great attention to detail',e:'The professor was known for the academic ___ of her research.',e2:'The professor was known for the academic rigor of her research.'},
+{w:'sarcastic',p:'adj.',ipa:'/sɑːrˈkæstɪk/',d:'showing or expressing sarcasm (a way of using words that are the opposite of what you mean in order to be unpleasant to sb or to make fun of them)',e:'___ comments',e2:'**sarcastic** comments'},
+{w:'elastic',p:'adj.',ipa:'/ɪˈlæstɪk/',d:'Something that is elastic is able to stretch easily and then return to its original size and shape.',e:'Beat it until the dough is slightly ___.',e2:'Beat it until the dough is slightly **elastic**.'},
+{w:'cohesion',p:'n.',ipa:'/koʊˈhiːʒən/',d:'If there is cohesion within a society, organization, or group, the different members fit together well and form a united whole.',e:'the ___ of the nuclear family',e2:'the **cohesion** of the nuclear family'},
+{w:'bolt',p:'v.',ipa:'/boʊlt/',d:'to fasten sth such as a door or window by sliding a bolt across; to be able to be fastened in this way',e:'When he saw the police arrive, he ___ down an alley.',e2:'When he saw the police arrive, he **bolted** down an alley.'},
+{w:'infinitesimal',p:'adj.',ipa:'/ˌɪnfɪnɪˈtɛsɪməl/',d:'extremely small',e:'___ traces of poison',e2:'**infinitesimal** traces of poison'},
+{w:'verifiable',p:'adj.',ipa:'/ˈvɛrɪfaɪəbəl/',d:'Something that is verifiable can be proved to be true or genuine.',e:'This is not a romantic notion but ___ fact.',e2:'This is not a romantic notion but **verifiable** fact.'},
+{w:'inestimable',p:'adj.',ipa:'/ɪnˈɛstɪməbəl/',d:'too great to calculate',e:'The information he provided was of ___ value.',e2:'The information he provided was of **inestimable** value.'},
+{w:'redundancy',p:'n.',ipa:'/rɪˈdʌndənsi/',d:'the situation when sb has to leave their job because there is no more work available for them',e:'Thousands of factory workers are facing ___.',e2:'Thousands of factory workers are facing **redundancy**.'},
+{w:'repository',p:'n.',ipa:'/rɪˈpɒzɪtɔːri/',d:'a place where sth is stored in large quantities',e:'My father is a ___ of family history.',e2:'My father is a **repository** of family history.'},
+{w:'expedite',p:'v.',ipa:'/ˈɛkspɪdaɪt/',d:'to make a process happen more quickly',e:'We tried to help you ___ your plans.',e2:'We tried to help you **expedite** your plans.'},
+{w:'inertia',p:'adj./v./n.',ipa:'/ɪˈnɜːrʃə/',d:'lack of energy; lack of desire or ability to move or change',e:'I can\'t seem to throw off this feeling of ___.',e2:'I can\'t seem to throw off this feeling of **inertia**.'},
+{w:'turnover',p:'n.',ipa:'/ˈtɜːrnoʊvər/',d:'The turnover of a company is the value of the goods or services sold during a particular period of time.',e:'The company had a ___ of $3.8 million.',e2:'The company had a **turnover** of $3.8 million.'},
+{w:'hospitable',p:'adj.',ipa:'/hɒˈspɪtəbəl/',d:'~ (to/towards sb)( of a person ) pleased to welcome guests; generous and friendly to visitors',e:'The local people are very ___ to strangers.',e2:'The local people are very **hospitable** to strangers.'},
+{w:'fecundity',p:'n.',ipa:'/fɪˈkʌndəti/',d:'the ability to produce a lot of crops, fruit, babies, young animals, etc.:',e:'female ___',e2:'female **fecundity**'},
+{w:'expediency',p:'n.',ipa:'/ɪkˈspiːdiənsi/',d:'doing what is convenient rather than what is morally right.',e:'This was a matter less of morals than of ___.',e2:'This was a matter less of morals than of **expediency**.'},
+{w:'palpitate',p:'v.',ipa:'/ˈpælpɪteɪt/',d:'to beat rapidly and/or in an irregular way especially because of fear or excitement',e:'Her heart began to ___ before the big interview.',e2:'Her heart began to **palpitate** before the big interview.'},
+{w:'install',p:'v.',ipa:'/ɪnˈstɔːl/',d:'to fix equipment or furniture into position so that it can be used',e:'He\'s getting a phone ___ tomorrow.',e2:'He\'s getting a phone **installed** tomorrow.'},
+{w:'warrant',p:'adj.',ipa:'/ˈwɒrənt/',d:'~ (for sth)~ (to do sth)a legal document that is signed by a judge and gives the police authority to do sth',e:'They issued a ___ for her arrest.',e2:'They issued a **warrant** for her arrest.'},
+{w:'anomalous',p:'adj.',ipa:'/əˈnɒmələs/',d:'different from what is normal or expected',e:'For years this ___ behaviour has baffled scientists.',e2:'For years this **anomalous** behaviour has baffled scientists.'},
+{w:'unfounded',p:'adj./v./n.',ipa:'/ʌnˈfaʊndɪd/',d:'not based on reason or fact',e:'___ allegations/rumours, etc.',e2:'**unfounded** allegations/rumours, etc.'},
+{w:'steward',p:'n.',ipa:'/ˈstjuːərd/',d:'a man whose job is to take care of passengers on a ship, an aircraft or a train and who brings them meals, etc.',e:'The flight ___ helped passengers find their seats.',e2:'The flight **steward** helped passengers find their seats.'},
+{w:'harbinger',p:'n.',ipa:'/ˈhɑːrbɪndʒər/',d:'a sign that shows that sth is going to happen soon, often sth bad',e:'The November air stung my cheeks, a ___ of winter.',e2:'The November air stung my cheeks, a **harbinger** of winter.'},
+{w:'apprentice',p:'n.',ipa:'/əˈprɛntɪs/',d:'a young person who works for an employer for a fixed period of time in order to learn the particular skills needed in their job',e:'an ___ electrician/chef',e2:'an **apprentice** electrician/chef'},
+{w:'resurgence',p:'n.',ipa:'/rɪˈsɜːrdʒəns/',d:'the return and growth of an activity that had stopped',e:'Police say drugs traffickers are behind the ___ of violence.',e2:'Police say drugs traffickers are behind the **resurgence** of violence.'},
+{w:'sequester',p:'n.',ipa:'/sɪˈkwɛstər/',d:'the same as sequestrate, to take control of sb\'s property or assets until a debt has been paid',e:'Everything he owned was ___.',e2:'Everything he owned was **sequestered**.'},
+{w:'proclamation',p:'n.',ipa:'/ˌprɒkləˈmeɪʃən/',d:'a public announcement about something important, often about something of national importance.',e:'The ___ of independence was broadcast over the radio.',e2:'The **proclamation** of independence was broadcast over the radio.'},
+{w:'collude',p:'v.',ipa:'/kəˈluːd/',d:'to work together secretly or illegally in order to trick other people',e:'Several people had ___ in the murder.',e2:'Several people had **colluded** in the murder.'},
+{w:'attest',p:'v.',ipa:'/əˈtɛst/',d:'to show or prove that sth is true',e:'Contemporary accounts ___ to his courage and determination.',e2:'Contemporary accounts **attest** to his courage and determination.'},
+{w:'outlier',p:'n.',ipa:'/ˈaʊtlaɪər/',d:'a person whose residence and place of business are at a distance',e:'One unusually high score was clearly an ___ in the data.',e2:'One unusually high score was clearly an **outlier** in the data.'},
+{w:'outmoded',p:'adj./v./n.',ipa:'/aʊtˈmoʊdɪd/',d:'no longer fashionable or useful',e:'an ___ attitude',e2:'an **outmoded** attitude'},
+{w:'proxy',p:'n.',ipa:'/ˈprɒksi/',d:'a person who has been given the authority to represent sb else',e:'Your ___ will need to sign the form on your behalf.',e2:'Your **proxy** will need to sign the form on your behalf.'},
+{w:'emissary',p:'n.',ipa:'/ˈɛmɪsəri/',d:'a person who is sent to deliver an official message, especially from one country to another, or to perform a special task',e:'The king sent an ___ to negotiate peace.',e2:'The king sent an **emissary** to negotiate peace.'},
+{w:'remorse',p:'n.',ipa:'/rɪˈmɔːrs/',d:'the feeling of being extremely sorry for sth wrong or bad that you have done',e:'I felt guilty and full of ___.',e2:'I felt guilty and full of **remorse**.'},
+{w:'hallmark',p:'n.',ipa:'/ˈhɔːlmɑːrk/',d:'a feature or quality that is typical of sb/sth',e:'Police said the explosion bore all the ___ of a terrorist attack.',e2:'Police said the explosion bore all the **hallmarks** of a terrorist attack.'},
+{w:'mesmerize',p:'v.',ipa:'/ˈmɛzməraɪz/',d:'to have such a strong effect on you that you cannot give your attention to anything else',e:'The dancer\'s movements seemed to ___ the entire audience.',e2:'The dancer\'s movements seemed to **mesmerize** the entire audience.'},
+{w:'complacency',p:'n.',ipa:'/kəmˈpleɪsənsi/',d:'( usuallydisapproving) a feeling of satisfaction with yourself or with a situation, so that you do not think any change is necessary; the state of being complacent',e:'Despite signs of an improvement in the economy, there is no room for ___.',e2:'Despite signs of an improvement in the economy, there is no room for **complacency**.'},
+{w:'provisional',p:'adj.',ipa:'/prəˈvɪʒənəl/',d:'arranged for the present time only and likely to be changed in the future',e:'___ arrangements',e2:'**provisional** arrangements'},
+{w:'procrastinate',p:'v.',ipa:'/proʊˈkræstɪneɪt/',d:'to delay doing sth that you should do, usually because you do not want to do it',e:'Most often we ___ when faced with something we do not want to do.',e2:'Most often we **procrastinate** when faced with something we do not want to do.'},
+{w:'sidestep',p:'v.',ipa:'/ˈsaɪdstɛp/',d:'to avoid answering a question or dealing with a problem',e:'Did you notice how she neatly ___ the question?',e2:'Did you notice how she neatly **sidestepped** the question?'},
+{w:'quintessential',p:'adj.',ipa:'/ˌkwɪntɪˈsɛnʃəl/',d:'means representing a perfect or typical example of something.',e:'Everybody thinks of him as the ___ New Yorker.',e2:'Everybody thinks of him as the **quintessential** New Yorker.'},
+{w:'salvage',p:'v.',ipa:'/ˈsælvɪdʒ/',d:'to save a badly damaged ship, etc. from being lost completely; to save parts or property from a damaged ship or from a fire, etc.',e:'The wreck was ___ by a team from the RAF.',e2:'The wreck was **salvaged** by a team from the RAF.'},
+{w:'juxtapose',p:'v.',ipa:'/ˈdʒʌkstəpoʊz/',d:'to put people or things together, especially in order to show a contrast or a new relationship between them',e:'In the exhibition, abstract paintings are ___ with shocking photographs.',e2:'In the exhibition, abstract paintings are **juxtaposed** with shocking photographs.'},
+{w:'pretext',p:'n.',ipa:'/ˈpriːtɛkst/',d:'a false reason that you give for doing sth, usually sth bad, in order to hide the real reason; an excuse',e:'The incident was used as a ___ for intervention in the area.',e2:'The incident was used as a **pretext** for intervention in the area.'},
+{w:'indice',p:'adj./v./n.',ipa:'/ˈɪndɪks/',d:'index',e:'The report listed several economic ___ for comparison.',e2:'The report listed several economic **indices** for comparison.'},
+{w:'supersede',p:'v.',ipa:'/ˌsuːpərˈsiːd/',d:'to take the place of sth/sb that is considered to be old-fashioned or no longer the best available',e:'The theory has been ___ by more recent research.',e2:'The theory has been **superseded** by more recent research.'},
+{w:'foment',p:'v.',ipa:'/foʊˈmɛnt/',d:'to create trouble or violence or make it worse',e:'They accused him of ___ political unrest.',e2:'They accused him of **fomenting** political unrest.'},
+{w:'pervade',p:'v.',ipa:'/pərˈveɪd/',d:'to spread through and be noticeable in every part of sth',e:'a ___ mood of fear',e2:'a **pervading** mood of fear'},
+{w:'rationale',p:'n.',ipa:'/ˌræʃəˈnæl/',d:'the principles or reasons which explain a particular decision, course of action, belief, etc.',e:'What is the ___ behind these new exams?',e2:'What is the **rationale** behind these new exams?'},
+{w:'subdue',p:'v.',ipa:'/səbˈdjuː/',d:'to bring sb/sth under control, especially by using force',e:'Troops were called in to ___ the rebels.',e2:'Troops were called in to **subdue** the rebels.'},
+{w:'omen',p:'n.',ipa:'/ˈoʊmən/',d:'a sign of what is going to happen in the future',e:'The ___ for their future success are not good.',e2:'The **omens** for their future success are not good.'},
+{w:'sanction',p:'n.',ipa:'/ˈsæŋkʃən/',d:'an official order that limits trade, contact, etc. with a particular country, in order to make it do sth, such as obeying international law',e:'Trade ___ were imposed against any country that refused to sign the agreement.',e2:'Trade **sanctions** were imposed against any country that refused to sign the agreement.'},
+{w:'neglect',p:'v.',ipa:'/nɪˈɡlɛkt/',d:'to fail to take care of sb/sth',e:'She denies ___ her baby.',e2:'She denies **neglecting** her baby.'},
+{w:'retrieve',p:'v.',ipa:'/rɪˈtriːv/',d:'to bring or get sth back, especially from a place where it should not be',e:'She bent to ___ her comb from the floor.',e2:'She bent to **retrieve** her comb from the floor.'},
+{w:'halt',p:'v.',ipa:'/hɔːlt/',d:'to stop; to make sb/sth stop',e:'She walked towards him and then ___.',e2:'She walked towards him and then **halted**.'},
+{w:'hamper',p:'v.',ipa:'/ˈhæmpər/',d:'to prevent sb from easily doing or achieving sth',e:'The bad weather ___ rescue operations.',e2:'The bad weather **hampered** rescue operations.'},
+{w:'opaque',p:'adj./v./n.',ipa:'/oʊˈpeɪk/',d:'( of glass, liquid, etc. ) not clear enough to see through or allow light through',e:'___ glass',e2:'**opaque** glass'},
+{w:'abrasive',p:'n.',ipa:'/əˈbreɪsɪv/',d:'an abrasive substance is rough and can be used to clean a surface or to make it smooth',e:'___ kitchen cleaners',e2:'**abrasive** kitchen cleaners'},
+{w:'outspoken',p:'adj./v./n.',ipa:'/aʊtˈspoʊkən/',d:'saying exactly what you think, even if this shocks or offends people',e:'an ___ opponent of the leader',e2:'an **outspoken** opponent of the leader'},
+{w:'betray',p:'v.',ipa:'/bɪˈtreɪ/',d:'to give information about sb/sth to an enemy',e:'For years they had been ___ state secrets to Russia.',e2:'For years they had been **betraying** state secrets to Russia.'},
+{w:'sway',p:'v.',ipa:'/sweɪ/',d:'to move slowly from side to side; to move sth in this way',e:'The branches were ___ in the wind.',e2:'The branches were **swaying** in the wind.'},
+{w:'exceptional',p:'adj.',ipa:'/ɪkˈsɛpʃənəl/',d:'unusually good',e:'At the age of five he showed ___ talent as a musician.',e2:'At the age of five he showed **exceptional** talent as a musician.'},
+{w:'convergence',p:'n.',ipa:'/kənˈvɜːrdʒəns/',d:'The convergence of different ideas, groups, or societies is the process by which they stop being different and become more similar.',e:'...the need to move towards greater economic ___.',e2:'...the need to move towards greater economic **convergence**.'},
+{w:'succession',p:'n.',ipa:'/səkˈsɛʃən/',d:'A succession of things of the same kind is a number of them that exist or happen one after the other.',e:'Adams took a ___ of jobs which have stood him in good stead.',e2:'Adams took a **succession** of jobs which have stood him in good stead.'},
+{w:'withhold',p:'v.',ipa:'/wɪðˈhoʊld/',d:'to refuse to give sth to sb',e:'She was accused of ___ information from the police.',e2:'She was accused of **withholding** information from the police.'},
+{w:'denote',p:'v.',ipa:'/dɪˈnoʊt/',d:'to be a sign of sth',e:'A very high temperature often ___ a serious illness.',e2:'A very high temperature often **denotes** a serious illness.'},
+{w:'barricade',p:'n.',ipa:'/ˈbærɪkeɪd/',d:'a line of objects placed across a road, etc. to stop people from getting past',e:'The police stormed the ___ the demonstrators had put up.',e2:'The police stormed the **barricades** the demonstrators had put up.'},
+{w:'revert',p:'v.',ipa:'/rɪˈvɜːrt/',d:'to return to a former state; to start doing sth again that you used to do in the past',e:'After her divorce she ___ to her maiden name.',e2:'After her divorce she **reverted** to her maiden name.'},
+{w:'indecision',p:'n.',ipa:'/ˌɪndɪˈsɪʒən/',d:'the state of being unable to decide',e:'After a moment\'s ___, he said yes.',e2:'After a moment\'s **indecision**, he said yes.'},
+{w:'intermingle',p:'v.',ipa:'/ˌɪntərˈmɪŋɡəl/',d:'to mix people, ideas, colours, etc. together; to be mixed in this way',e:'The book ___ fact with fiction.',e2:'The book **intermingles** fact with fiction.'},
+{w:'contrivance',p:'n.',ipa:'/kənˈtraɪvəns/',d:'something that sb has done or written that does not seem natural; the fact of seeming artificial',e:'The film is spoilt by unrealistic ___ of plot.',e2:'The film is spoilt by unrealistic **contrivances** of plot.'},
+{w:'deterrent',p:'n.',ipa:'/dɪˈtɜːrənt/',d:'a thing that makes sb less likely to do sth (= that deters them)',e:'Hopefully his punishment will act as a ___ to others.',e2:'Hopefully his punishment will act as a **deterrent** to others.'},
+{w:'haste',p:'adj./v./n.',ipa:'/heɪst/',d:'speed in doing sth, especially because you do not have enough time',e:'In her ___ to complete the work on time, she made a number of mistakes.',e2:'In her **haste** to complete the work on time, she made a number of mistakes.'},
+{w:'reminiscent',p:'adj.',ipa:'/ˌrɛmɪˈnɪsənt/',d:'reminding you of sb/sth',e:'The way he laughed was strongly ___ of his father.',e2:'The way he laughed was strongly **reminiscent** of his father.'},
+{w:'surmount',p:'v.',ipa:'/sərˈmaʊnt/',d:'to deal successfully with a difficulty',e:'She was well aware of the difficulties that had to be ___.',e2:'She was well aware of the difficulties that had to be **surmounted**.'},
+{w:'underpin',p:'v.',ipa:'/ˌʌndərˈpɪn/',d:'to support or form the basis of an argument, a claim, etc.',e:'The report is ___ by extensive research.',e2:'The report is **underpinned** by extensive research.'},
+{w:'obstinacy',p:'n.',ipa:'/ˈɒbstɪnəsi/',d:'the quality of being difficult to remedy, relieve, or subdue',e:'His ___ made it impossible to reach a compromise.',e2:'His **obstinacy** made it impossible to reach a compromise.'},
+{w:'entanglement',p:'n.',ipa:'/ɪnˈtæŋɡəlmənt/',d:'a difficult or complicated relationship with another person or country',e:'Many dolphins die each year from ___ in fishing nets.',e2:'Many dolphins die each year from **entanglement** in fishing nets.'},
+{w:'obtrusive',p:'adj.',ipa:'/əbˈtruːsɪv/',d:'noticeable in an unpleasant way',e:'The sofa would be less ___ in a paler colour.',e2:'The sofa would be less **obtrusive** in a paler colour.'},
+{w:'headstrong',p:'n.',ipa:'/ˈhɛdstrɒŋ/',d:'a headstrong person is determined to do things their own way and refuses to listen to advice',e:'The ___ child refused to wear a coat despite the cold.',e2:'The **headstrong** child refused to wear a coat despite the cold.'},
+{w:'meddlesome',p:'adj./v./n.',ipa:'/ˈmɛdəlsəm/',d:'enjoying getting involved in situations that do not concern them',e:'Her ___ neighbor was always offering unwanted advice.',e2:'Her **meddlesome** neighbor was always offering unwanted advice.'},
+{w:'extemporaneous',p:'adj.',ipa:'/ɪkˌstɛmpəˈreɪniəs/',d:'spoken, performed, etc, without planning or preparation; impromptu; extempore',e:'He delivered a confident ___ speech with no notes.',e2:'He delivered a confident **extemporaneous** speech with no notes.'},
+{w:'inconsolable',p:'adj.',ipa:'/ˌɪnkənˈsoʊləbəl/',d:'very sad and unable to accept help or comfort',e:'They were ___ when their only child died.',e2:'They were **inconsolable** when their only child died.'},
+{w:'redeemable',p:'adj.',ipa:'/rɪˈdiːməbəl/',d:'that can be exchanged for money or goods',e:'These vouchers are ___ against any future purchase.',e2:'These vouchers are **redeemable** against any future purchase.'},
+{w:'sanitize',p:'v.',ipa:'/ˈsænɪtaɪz/',d:'to remove the parts of sth that could be considered unpleasant',e:'This ___ account of his life does not mention his time in prison.',e2:'This **sanitized** account of his life does not mention his time in prison.'},
+{w:'populate',p:'v.',ipa:'/ˈpɒpjəleɪt/',d:'to live in an area and form its population',e:'a heavily/densely/sparsely/thinly ___ country',e2:'a heavily/densely/sparsely/thinly **populated** country'},
+{w:'inculcate',p:'v.',ipa:'/ɪnˈkʌlkeɪt/',d:'to cause sb to learn and remember ideas, moral principles, etc., especially by repeating them often',e:'to ___ a sense of responsibility in sb',e2:'to **inculcate** a sense of responsibility in sb'},
+{w:'frailty',p:'adj.',ipa:'/ˈfreɪlti/',d:'weakness and poor health',e:'Increasing ___ meant that she was more and more confined to bed.',e2:'Increasing **frailty** meant that she was more and more confined to bed.'},
+{w:'abbreviate',p:'v.',ipa:'/əˈbriːvieɪt/',d:'to make a word, phrase or name shorter by leaving out letters or using only the first letter of each word',e:'the Jet Propulsion Laboratory (usually ___ to JPL)',e2:'the Jet Propulsion Laboratory (usually **abbreviated** to JPL)'},
+{w:'interchangeable',p:'adj.',ipa:'/ˌɪntərˈtʃeɪndʒəbəl/',d:'Things that are interchangeable can be exchanged with each other without it making any difference.',e:'These expressions are often used ___, but they do have different meanings.',e2:'These expressions are often used **interchangeably**, but they do have different meanings.'},
+{w:'courtesy',p:'adj.',ipa:'/ˈkɜːrtəsi/',d:'polite behaviour that shows respect for other people',e:'I was treated with the utmost ___ by the staff.',e2:'I was treated with the utmost **courtesy** by the staff.'},
+{w:'complementary',p:'adj.',ipa:'/ˌkɒmplɪˈmɛntəri/',d:'Complementary things are different from each other but make a good combination.',e:'To improve the quality of life through work, two ___ strategies are necessary.',e2:'To improve the quality of life through work, two **complementary** strategies are necessary.'},
+{w:'incompatible',p:'adj.',ipa:'/ˌɪnkəmˈpætəbəl/',d:'two actions, ideas, etc. that are incompatible are not acceptable or possible together because of basic differences',e:'The hours of the job are ___ with family life.',e2:'The hours of the job are **incompatible** with family life.'},
+{w:'interplay',p:'n.',ipa:'/ˈɪntərpleɪ/',d:'the way in which two or more things or people affect each other SYN interaction',e:'the ___ between politics and the environment',e2:'the **interplay** between politics and the environment'},
+{w:'congruent',p:'adj.',ipa:'/ˈkɒŋɡruənt/',d:'having the same size and shape',e:'___ triangles',e2:'**congruent** triangles'},
+{w:'continuum',p:'n.',ipa:'/kənˈtɪnjuəm/',d:'a series of similar items in which each is almost the same as the ones next to it but the last is very different from the first',e:'Political opinions exist on a ___ rather than in fixed categories.',e2:'Political opinions exist on a **continuum** rather than in fixed categories.'},
+{w:'attentive',p:'adj.',ipa:'/əˈtɛntɪv/',d:'listening or watching carefully and with interest',e:'an ___ audience',e2:'an **attentive** audience'},
+{w:'preoccupy',p:'adj.',ipa:'/priˈɒkjəpaɪ/',d:'If something is preoccupying you, you are thinking about it a lot.',e:'Crime and the fear of crime ___ the community.',e2:'Crime and the fear of crime **preoccupy** the community.'},
+{w:'scatter',p:'adj./v./n.',ipa:'/ˈskætər/',d:'If you scatter things over an area, you throw or drop them so that they spread all over the area.',e:'She tore the rose apart and ___ the petals over the grave.',e2:'She tore the rose apart and **scattered** the petals over the grave.'},
+{w:'ponder',p:'adj./v./n.',ipa:'/ˈpɒndər/',d:'If you ponder something, you think about it carefully.',e:'I found myself constantly ___ the question: "How could anyone do these things?"',e2:'I found myself constantly **pondering** the question: "How could anyone do these things?"'},
+{w:'debris',p:'adj./v./n.',ipa:'/dəˈbriː/',d:'pieces of wood, metal, brick, etc. that are left after sth has been destroyed',e:'Emergency teams are still clearing the ___ from the plane crash.',e2:'Emergency teams are still clearing the **debris** from the plane crash.'},
+{w:'remembrance',p:'n.',ipa:'/rɪˈmɛmbrəns/',d:'the act or process of remembering an event in the past or a person who is dead',e:'A service was held in ___ of local soldiers killed in the war.',e2:'A service was held in **remembrance** of local soldiers killed in the war.'},
+{w:'restraint',p:'n.',ipa:'/rɪˈstreɪnt/',d:'a rule, a fact, an idea, etc. that limits or controls what people can do',e:'The government has imposed export ___ on some products.',e2:'The government has imposed export **restraints** on some products.'},
+{w:'disingenuous',p:'adj.',ipa:'/ˌdɪsɪnˈdʒɛnjuəs/',d:'not sincere, especially when you pretend to know less about sth than you really do',e:'It would be ___ of me to claim I had never seen it.',e2:'It would be **disingenuous** of me to claim I had never seen it.'},
+{w:'iconoclastic',p:'adj.',ipa:'/aɪˌkɒnəˈklæstɪk/',d:'criticizing popular beliefs or established customs and ideas',e:'The artist was known for his ___ rejection of tradition.',e2:'The artist was known for his **iconoclastic** rejection of tradition.'},
+{w:'prefigure',p:'adj./v./n.',ipa:'/priːˈfɪɡjər/',d:'If one thing prefigures another, it is a first indication that suggests or determines that the second thing will happen.',e:'The wall through Berlin was finally ruptured, ___ the reunification of Germany.',e2:'The wall through Berlin was finally ruptured, **prefiguring** the reunification of Germany.'},
+{w:'authoritative',p:'adj.',ipa:'/əˈθɒrɪteɪtɪv/',d:'Someone or something that is authoritative gives an impression of power and importance and is likely to be obeyed.',e:'He has a commanding presence and deep, ___ voice.',e2:'He has a commanding presence and deep, **authoritative** voice.'},
+{w:'diversion',p:'n.',ipa:'/daɪˈvɜːrʒən/',d:'A diversion is an action or event that attracts your attention away from what you are doing or concentrating on.',e:'...armed robbers who escaped after throwing smoke bombs to create a ___.',e2:'...armed robbers who escaped after throwing smoke bombs to create a **diversion**.'},
+{w:'constraint',p:'n.',ipa:'/kənˈstreɪnt/',d:'A constraint is something that limits or controls what you can do.',e:'Their decision to abandon the trip was made because of financial ___.',e2:'Their decision to abandon the trip was made because of financial **constraints**.'},
+{w:'preempt',p:'adj./v./n.',ipa:'/priˈɛmpt/',d:'If you preempt an action, you prevent it from happening by doing something that makes it unnecessary or impossible.',e:'The law would ___ stronger local rules.',e2:'The law would **preempt** stronger local rules.'},
+{w:'inexplicable',p:'adj.',ipa:'/ˌɪnɪkˈsplɪkəbəl/',d:'If something is inexplicable, you cannot explain why it happens or why it is true.',e:'His behaviour was extraordinary and ___.',e2:'His behaviour was extraordinary and **inexplicable**.'},
+{w:'subsume',p:'adj./v./n.',ipa:'/səbˈsjuːm/',d:'If something is subsumed within a larger group or class, it is included within it, rather than being considered as something separate.',e:'After that the two alliances might be ___ into a new European security system.',e2:'After that the two alliances might be **subsumed** into a new European security system.'},
+{w:'attenuate',p:'v.',ipa:'/əˈtɛnjueɪt/',d:'to make sth weaker or less effective',e:'The drug ___ the effects of the virus.',e2:'The drug **attenuates** the effects of the virus.'},
+{w:'portend',p:'v.',ipa:'/pɔːrˈtɛnd/',d:'to be a sign or warning of sth that is going to happen in the future, especially sth bad or unpleasant',e:'The change did not ___ a basic improvement in social conditions.',e2:'The change did not **portend** a basic improvement in social conditions.'},
+{w:'thwart',p:'adj./v./n.',ipa:'/θwɔːrt/',d:'If you thwart someone or thwart their plans, you prevent them from doing or getting what they want.',e:'The security forces were doing all they could to ___ terrorists.',e2:'The security forces were doing all they could to **thwart** terrorists.'},
+{w:'malign',p:'adj./v./n.',ipa:'/məˈlaɪn/',d:'If you malign someone, you say unpleasant and untrue things about them.',e:'We ___ him dreadfully when you come to think of it.',e2:'We **maligned** him dreadfully when you come to think of it.'},
+{w:'caricature',p:'n.',ipa:'/ˈkærɪkətʃʊr/',d:'A caricature of someone is a drawing or description of them that exaggerates their appearance or behaviour in a humorous or critical way.',e:'The poster showed a ___ of Hitler with a devil\'s horns and tail.',e2:'The poster showed a **caricature** of Hitler with a devil\'s horns and tail.'},
+{w:'profusion',p:'n.',ipa:'/prəˈfjuːʒən/',d:'If there is a profusion of something or if it occurs in profusion, there is a very large quantity or variety of it.',e:'...a delightful river with a ___ of wild flowers along its banks.',e2:'...a delightful river with a **profusion** of wild flowers along its banks.'},
+{w:'homogeneity',p:'n.',ipa:'/ˌhoʊmədʒəˈniːəti/',d:'Homogeneity is the quality of being homogeneous.',e:'The committee valued diversity over strict ___.',e2:'The committee valued diversity over strict **homogeneity**.'},
+{w:'traverse',p:'adj./v./n.',ipa:'/trəˈvɜːrs/',d:'If someone or something traverses an area of land or water, they go across it.',e:'I ___ the narrow pedestrian bridge.',e2:'I **traversed** the narrow pedestrian bridge.'},
+{w:'decimate',p:'v.',ipa:'/ˈdɛsɪmeɪt/',d:'To decimate something such as a group of people or animals means to destroy a very large number of them.',e:'The pollution could ___ the river\'s thriving population of kingfishers.',e2:'The pollution could **decimate** the river\'s thriving population of kingfishers.'},
+{w:'foreground',p:'n.',ipa:'/ˈfɔːrɡraʊnd/',d:'the part of a view, picture, etc. that is nearest to you when you look at it',e:'The figure in the ___ is the artist\'s mother.',e2:'The figure in the **foreground** is the artist\'s mother.'},
+{w:'furnish',p:'v.',ipa:'/ˈfɜːrnɪʃ/',d:'to put furniture in a house, room, etc.',e:'The room was ___ with antiques.',e2:'The room was **furnished** with antiques.'},
+{w:'transience',p:'n.',ipa:'/ˈtrænziəns/',d:'If you talk about the transience of a situation, you mean that it lasts only a short time or is constantly changing.',e:'...the superficiality and ___ of the club scene.',e2:'...the superficiality and **transience** of the club scene.'},
+{w:'bewilder',p:'adj./v./n.',ipa:'/bɪˈwɪldər/',d:'If something bewilders you, it is so confusing or difficult that you cannot understand it.',e:'The silence from Alex had hurt and ___ her.',e2:'The silence from Alex had hurt and **bewildered** her.'},
+{w:'ebb',p:'adj./v./n.',ipa:'/ɛb/',d:'( of the tide in the sea ) to move away from the land',e:'The pain was ___.',e2:'The pain was **ebbing**.'},
+{w:'mediate',p:'v.',ipa:'/ˈmiːdieɪt/',d:'to try to end a disagreement between two or more people or groups by talking to them and trying to find things that everyone can agree on',e:'The Secretary-General was asked to ___ in the dispute.',e2:'The Secretary-General was asked to **mediate** in the dispute.'},
+{w:'protest',p:'v.',ipa:'/prəˈtɛst/',d:'to say or do sth to show that you disagree with or disapprove of sth, especially publicly',e:'Students took to the streets to ___ against the decision.',e2:'Students took to the streets to **protest** against the decision.'},
+{w:'misgiving',p:'adj./v./n.',ipa:'/mɪsˈɡɪvɪŋ/',d:'feelings of doubt or anxiety about what might happen, or about whether or not sth is the right thing to do',e:'I had grave ___ about making the trip.',e2:'I had grave **misgivings** about making the trip.'},
+{w:'composure',p:'n.',ipa:'/kəmˈpoʊʒər/',d:'the state of being calm and in control of your feelings or behaviour',e:'to keep/lose/recover/regain your ___',e2:'to keep/lose/recover/regain your **composure**'},
+{w:'modesty',p:'n.',ipa:'/ˈmɒdɪsti/',d:'the fact of not talking much about your abilities or possessions',e:'He accepted the award with characteristic ___.',e2:'He accepted the award with characteristic **modesty**.'},
+{w:'retrospective',p:'adj.',ipa:'/ˌrɛtrəˈspɛktɪv/',d:'thinking about or connected with sth that happened in the past',e:'___ legislation',e2:'**retrospective** legislation'},
+{w:'mangle',p:'v.',ipa:'/ˈmæŋɡəl/',d:'to crush or twist sth so that it is badly damaged',e:'His hand was ___ in the machine.',e2:'His hand was **mangled** in the machine.'},
+{w:'inimitable',p:'adj.',ipa:'/ɪˈnɪmɪtəbəl/',d:'too good or individual for anyone else to copy with the same effect',e:'John related in his own ___ way the story of his trip to Tibet.',e2:'John related in his own **inimitable** way the story of his trip to Tibet.'},
+{w:'autonomous',p:'adj.',ipa:'/ɔːˈtɒnəməs/',d:'( of a country, a region or an organization ) able to govern itself or control its own affairs',e:'an ___ republic/state/province',e2:'an **autonomous** republic/state/province'},
+{w:'encroach',p:'v.',ipa:'/ɪnˈkroʊtʃ/',d:'to begin to affect or use up too much of sb\'s time, rights, personal life, etc.',e:'I won\'t ___ on your time any longer.',e2:'I won\'t **encroach** on your time any longer.'},
+{w:'abut',p:'v.',ipa:'/əˈbʌt/',d:'to be next to sth or to have one side touching the side of sth',e:'His land ___ onto a road.',e2:'His land **abuts** onto a road.'},
+{w:'proprietary',p:'adj.',ipa:'/prəˈpraɪətɛri/',d:'substances or products are sold under a brand name',e:'some ___ brands of dog food',e2:'some **proprietary** brands of dog food'},
+{w:'wear out',p:'adj./v./n.',ipa:'/wɛr aʊt/',d:'When something wears out or when you wear it out, it is used so much that it becomes thin or weak and unable to be used anymore.',e:'Every time she checked her watch, she wondered if the batteries were ___.',e2:'Every time she checked her watch, she wondered if the batteries were wearing out.'},
+{w:'confidential',p:'adj.',ipa:'/ˌkɒnfɪˈdɛnʃəl/',d:'meant to be kept secret and not told to or shared with other people',e:'___ information/documents',e2:'**confidential** information/documents'},
+{w:'tendentious',p:'adj.',ipa:'/tɛnˈdɛnʃəs/',d:'( of a speech, piece of writing, theory, etc. ) expressing a strong opinion that people are likely to disagree with',e:'Critics called the article ___ and one-sided.',e2:'Critics called the article **tendentious** and one-sided.'},
+{w:'elusive',p:'adj.',ipa:'/ɪˈluːsɪv/',d:'difficult to find, define, or achieve',e:'Eric, as ___ as ever, was nowhere to be found.',e2:'Eric, as **elusive** as ever, was nowhere to be found.'},
+{w:'hostile',p:'adj./v./n.',ipa:'/ˈhɒstaɪl/',d:'very unfriendly or aggressive and ready to argue or fight',e:'The speaker got a ___ reception from the audience.',e2:'The speaker got a **hostile** reception from the audience.'},
+{w:'virtuosity',p:'n.',ipa:'/ˌvɜːrtʃuˈɒsəti/',d:'a very high degree of skill in performing or playing',e:'a performance of breathtaking ___',e2:'a performance of breathtaking **virtuosity**'},
+{w:'circumscribe',p:'v.',ipa:'/ˈsɜːrkəmskraɪb/',d:'to limit sb/sth\'s freedom, rights, power, etc.',e:'The power of the monarchy was ___ by the new law.',e2:'The power of the monarchy was **circumscribed** by the new law.'},
+{w:'hazy',p:'adj.',ipa:'/ˈheɪzi/',d:'not clear because of haze',e:'a ___ afternoon/sky',e2:'a **hazy** afternoon/sky'},
+{w:'skew',p:'v.',ipa:'/skjuː/',d:'to change or influence sth with the result that it is not accurate, fair, normal, etc.',e:'to ___ the statistics',e2:'to **skew** the statistics'},
+{w:'encompass',p:'v.',ipa:'/ɪnˈkʌmpəs/',d:'to include a large number or range of things',e:'The job ___ a wide range of responsibilities.',e2:'The job **encompasses** a wide range of responsibilities.'},
+{w:'irritate',p:'v.',ipa:'/ˈɪrɪteɪt/',d:'to annoy sb, especially by sth you continuously do or by sth that continuously happens',e:'The way she puts on that accent really ___ me.',e2:'The way she puts on that accent really **irritates** me.'},
+{w:'archetype',p:'n.',ipa:'/ˈɑːrkɪtaɪp/',d:'the most typical or perfect example of a particular kind of person or thing',e:'She is the ___ of an American movie star.',e2:'She is the **archetype** of an American movie star.'},
+{w:'beneficiary',p:'n.',ipa:'/ˌbɛnɪˈfɪʃəri/',d:'a person who gains as a result of sth',e:'Who will be the main ___ of the cuts in income tax?',e2:'Who will be the main **beneficiary** of the cuts in income tax?'},
+{w:'contrive',p:'v.',ipa:'/kənˈtraɪv/',d:'to manage to do sth despite difficulties',e:'She ___ to spend a couple of hours with him every Sunday evening.',e2:'She **contrived** to spend a couple of hours with him every Sunday evening.'},
+{w:'appalled',p:'adj./v./n.',ipa:'/əˈpɔːld/',d:'feeling or showing horror or disgust at sth unpleasant or wrong',e:'We watched ___ as the child ran in front of the car.',e2:'We watched **appalled** as the child ran in front of the car.'},
+{w:'entrench',p:'v.',ipa:'/ɪnˈtrɛntʃ/',d:'to establish sth very firmly so that it is very difficult to change',e:'Sexism is deeply ___ in our society.',e2:'Sexism is deeply **entrenched** in our society.'},
+{w:'align',p:'v.',ipa:'/əˈlaɪn/',d:'to arrange sth in the correct position, or to be in the correct position, in relation to sth else, especially in a straight line',e:'Make sure the shelf is ___ with the top of the cupboard.',e2:'Make sure the shelf is **aligned** with the top of the cupboard.'},
+{w:'obsolescence',p:'n.',ipa:'/ˌɒbsəˈlɛsəns/',d:'the state of becoming old-fashioned and no longer useful (= becoming obsolete )',e:'Planned ___ keeps consumers buying new devices.',e2:'Planned **obsolescence** keeps consumers buying new devices.'},
+{w:'overturn',p:'adj./v./n.',ipa:'/ˌoʊvərˈtɜːrn/',d:'if sth overturns , or if sb overturns it, it turns upside down or on its side',e:'The car skidded and ___.',e2:'The car skidded and **overturned**.'},
+{w:'erasure',p:'n.',ipa:'/ɪˈreɪʒər/',d:'the act of removing or destroying sth',e:'the accidental ___ of important computer disks (= the removal of information from them)',e2:'the accidental **erasure** of important computer disks (= the removal of information from them)'},
+{w:'trade-off',p:'n.',ipa:'/ˈtreɪd ɒf/',d:'the act of balancing two things that you need or want but which are opposed to each other',e:'There is a ___ between the benefits of the drug and the risk of side effects.',e2:'There is a **trade-off** between the benefits of the drug and the risk of side effects.'},
+{w:'magnetic',p:'adj.',ipa:'/mæɡˈnɛtɪk/',d:'behaving like a magnet',e:'The block becomes ___ when the current is switched on.',e2:'The block becomes **magnetic** when the current is switched on.'},
+{w:'allowance',p:'n.',ipa:'/əˈlaʊəns/',d:'an amount of money that is given to sb regularly or for a particular purpose',e:'an ___ of $20 a day',e2:'an **allowance** of $20 a day'},
+{w:'wit',p:'n.',ipa:'/wɪt/',d:'the ability to say or write things that are both clever and amusing',e:'woman of ___ and intelligence',e2:'woman of **wit** and intelligence'},
+{w:'malice',p:'adj./v./n.',ipa:'/ˈmælɪs/',d:'feeling of hatred for sb that causes a desire to harm them',e:'He sent the letter out of ___.',e2:'He sent the letter out of **malice**.'},
+{w:'jest',p:'adj./v./n.',ipa:'/dʒɛst/',d:'something said or done to amuse people',e:'The remark was made half in ___.',e2:'The remark was made half in **jest**.'},
+{w:'delicate',p:'adj./v./n.',ipa:'/ˈdɛlɪkət/',d:'easily damaged or broken',e:'The eye is one of the most ___ organs of the body.',e2:'The eye is one of the most **delicate** organs of the body.'},
+{w:'itemize',p:'v.',ipa:'/ˈaɪtəmaɪz/',d:'to produce a detailed list of things',e:'The report ___ 23 different faults.',e2:'The report **itemizes** 23 different faults.'},
+{w:'auxiliary',p:'adj.',ipa:'/ɔːɡˈzɪljəri/',d:'giving help or support to the main group of workers',e:'___ nurses/workers/services',e2:'**auxiliary** nurses/workers/services'},
+{w:'valor',p:'adj./v./n.',ipa:'/ˈvælər/',d:'worthiness, bravery',e:'The soldier was awarded a medal for his ___ in battle.',e2:'The soldier was awarded a medal for his **valor** in battle.'},
+{w:'deduce',p:'v.',ipa:'/dɪˈdjuːs/',d:'to form an opinion about sth based on the information or evidence that is available',e:'Can we ___ from your silence that you do not approve?',e2:'Can we **deduce** from your silence that you do not approve?'},
+{w:'indispensable',p:'adj.',ipa:'/ˌɪndɪˈspɛnsəbəl/',d:'too important to be without',e:'Cars have become an ___ part of our lives.',e2:'Cars have become an **indispensable** part of our lives.'},
+{w:'endorsement',p:'n.',ipa:'/ɪnˈdɔːrsmənt/',d:'a public statement or action showing that you support sb/sth',e:'The election victory is a clear ___ of their policies.',e2:'The election victory is a clear **endorsement** of their policies.'},
+{w:'incredulity',p:'v.',ipa:'/ˌɪnkrɪˈdjuːləti/',d:'If someone reacts with incredulity to something, they are unable to believe it because it is very surprising or shocking.',e:'The announcement has been met with ___.',e2:'The announcement has been met with **incredulity**.'},
+{w:'gratification',p:'n.',ipa:'/ˌɡrætɪfɪˈkeɪʃən/',d:'the state of feeling pleasure when sth goes well for you or when your desires are satisfied; sth that gives you pleasure',e:'A feed will usually provide instant ___ to a crying baby.',e2:'A feed will usually provide instant **gratification** to a crying baby.'},
+{w:'accredited',p:'adj./v./n.',ipa:'/əˈkrɛdɪtɪd/',d:'officially recognized as sth; with official permission to be sth',e:'Only ___ journalists were allowed entry.',e2:'Only **accredited** journalists were allowed entry.'},
+{w:'instinctive',p:'adj.',ipa:'/ɪnˈstɪŋktɪv/',d:'based on instinct , not thought or training',e:'___ knowledge',e2:'**instinctive** knowledge'},
+{w:'impose',p:'v.',ipa:'/ɪmˈpoʊz/',d:'to introduce a new law, rule, tax, etc.; to order that a rule, punishment, etc. be used',e:'A new tax was ___ on fuel.',e2:'A new tax was **imposed** on fuel.'},
+{w:'irritating',p:'adj./v./n.',ipa:'/ˈɪrɪteɪtɪŋ/',d:'Something that is irritating keeps annoying you.',e:'They also have the ___ habit of interrupting.',e2:'They also have the **irritating** habit of interrupting.'},
+{w:'complimentary',p:'adj.',ipa:'/ˌkɒmplɪˈmɛntəri/',d:'If you are complimentary about something, you express admiration for it.',e:'The staff have been very ___, and so have the customers.',e2:'The staff have been very **complimentary**, and so have the customers.'},
+{w:'hazardous',p:'adj.',ipa:'/ˈhæzərdəs/',d:'involving risk or danger, especially to sb\'s health or safety',e:'It would be ___ to invest so much.',e2:'It would be **hazardous** to invest so much.'},
+{w:'peripheral',p:'adj.',ipa:'/pəˈrɪfərəl/',d:'not as important as the main aim, part, etc. of sth',e:'Fund-raising is ___ to their main activities.',e2:'Fund-raising is **peripheral** to their main activities.'},
+{w:'contingent',p:'n.',ipa:'/kənˈtɪndʒənt/',d:'a group of people at a meeting or an event who have sth in common, especially the place they come from, that is not shared by other people at the event',e:'The largest ___ was from the United States',e2:'The largest **contingent** was from the United States'},
+{w:'serendipitous',p:'n.',ipa:'/ˌsɛrənˈdɪpɪtəs/',d:'A serendipitous event is one that is not planned but has a good result.',e:'...a ___ discovery',e2:'...a **serendipitous** discovery'},
+{w:'iterative',p:'adj.',ipa:'/ˈɪtərətɪv/',d:'repetitious or frequent',e:'Migration is an ___ process.',e2:'Migration is an **iterative** process.'},
+{w:'congregate',p:'v.',ipa:'/ˈkɒŋɡrɪɡeɪt/',d:'to come together in a group',e:'Young people often ___ in the main square in the evenings.',e2:'Young people often **congregate** in the main square in the evenings.'},
+{w:'prominence',p:'n.',ipa:'/ˈprɒmɪnəns/',d:'the state of being important, well known or noticeable',e:'a young actor who has recently risen to ___',e2:'a young actor who has recently risen to **prominence**'},
+{w:'underneath',p:'adj./v./n.',ipa:'/ˌʌndərˈniːθ/',d:'under or below sth else, especially when it is hidden or covered by the thing on top',e:'The coin rolled ___ the piano.',e2:'The coin rolled **underneath** the piano.'},
+{w:'dignified',p:'adj./v./n.',ipa:'/ˈdɪɡnɪfaɪd/',d:'calm and serious and deserving respect',e:'a ___ person/manner/voice',e2:'a **dignified** person/manner/voice'},
+{w:'slight',p:'adj./v./n.',ipa:'/slaɪt/',d:'very small in degree',e:'a ___ increase/change/delay/difference',e2:'a **slight** increase/change/delay/difference'},
+{w:'prone',p:'adj./v./n.',ipa:'/proʊn/',d:'likely to suffer from sth or to do sth bad',e:'Working without a break makes you more ___ to error.',e2:'Working without a break makes you more **prone** to error.'},
+{w:'apparatus',p:'n.',ipa:'/ˌæpəˈreɪtəs/',d:'the tools or other pieces of equipment that are needed for a particular activity or task',e:'Firefighters needed breathing ___ to enter the burning house.',e2:'Firefighters needed breathing **apparatus** to enter the burning house.'},
+{w:'delimit',p:'v.',ipa:'/diːˈlɪmɪt/',d:'to decide what the limits of sth are',e:'This is not meant to ___ what approaches social researchers can adopt.',e2:'This is not meant to **delimit** what approaches social researchers can adopt.'},
+{w:'offset',p:'v.',ipa:'/ˈɒfsɛt/',d:'to use one cost, payment or situation in order to cancel or reduce the effect of another',e:'Prices have risen in order to ___ the increased cost of materials.',e2:'Prices have risen in order to **offset** the increased cost of materials.'},
+{w:'accommodate',p:'v.',ipa:'/əˈkɒmədeɪt/',d:'to provide sb with a room or place to sleep, live or sit',e:'The hotel can ___ up to 500 guests.',e2:'The hotel can **accommodate** up to 500 guests.'},
+{w:'transcend',p:'v.',ipa:'/trænˈsɛnd/',d:'to be or go beyond the usual limits of sth',e:'Tomorrow we will ___ these as well, and the dreamers will deserve a lot of the credit.',e2:'Tomorrow we will **transcend** these as well, and the dreamers will deserve a lot of the credit.'},
+{w:'malicious',p:'adj.',ipa:'/məˈlɪʃəs/',d:'having or showing hatred and a desire to harm sb or hurt their feelings',e:'He took ___ pleasure in telling me what she had said.',e2:'He took **malicious** pleasure in telling me what she had said.'},
+{w:'fruitful',p:'adj.',ipa:'/ˈfruːtfəl/',d:'producing many useful results',e:'a ___ collaboration/discussion',e2:'a **fruitful** collaboration/discussion'},
+{w:'evacuate',p:'v.',ipa:'/ɪˈvækjueɪt/',d:'to move people from a place of danger to a safer place',e:'Police ___ nearby buildings',e2:'Police **evacuated** nearby buildings'},
+{w:'tangle',p:'n.',ipa:'/ˈtæŋɡəl/',d:'a twisted mass of threads, hair, etc. that cannot be easily separated',e:'a ___ of branches',e2:'a **tangle** of branches'},
+{w:'bracing',p:'adj./v./n.',ipa:'/ˈbreɪsɪŋ/',d:'making you feel full of energy because it is cold',e:'___ sea air',e2:'**bracing** sea air'},
+{w:'unremitting',p:'adj./v./n.',ipa:'/ˌʌnrɪˈmɪtɪŋ/',d:'never stopping',e:'___ hostility',e2:'**unremitting** hostility'},
+{w:'tentative',p:'adj.',ipa:'/ˈtɛntətɪv/',d:'not definite or certain because you may want to change it later',e:'We made a ___ arrangement to meet on Friday.',e2:'We made a **tentative** arrangement to meet on Friday.'},
+{w:'imbue',p:'v.',ipa:'/ɪmˈbjuː/',d:'to fill sb/sth with strong feelings, opinions or values',e:'Her voice was ___ with an unusual seriousness.',e2:'Her voice was **imbued** with an unusual seriousness.'},
+{w:'regale',p:'v.',ipa:'/rɪˈɡeɪl/',d:'to amuse or entertain sb with stories, jokes, etc.',e:'He ___ us with tales of his days as a jazz pianist.',e2:'He **regaled** us with tales of his days as a jazz pianist.'},
+{w:'recapitulation',p:'n.',ipa:'/ˌriːkəˌpɪtʃəˈleɪʃən/',d:'a concise summary',e:'Recent history of sedimentation is seen to be a ___ of the past.',e2:'Recent history of sedimentation is seen to be a **recapitulation** of the past.'},
+{w:'corollary',p:'n.',ipa:'/ˈkɒrəlɛri/',d:'a situation, an argument or a fact that is the natural and direct result of another one',e:'The number of prisoners increased as a ___ of the government\'s determination to combat violent crime.',e2:'The number of prisoners increased as a **corollary** of the government\'s determination to combat violent crime.'},
+{w:'effigy',p:'n.',ipa:'/ˈɛfɪdʒi/',d:'a statue of a famous person, a saint or a god',e:'stone ___ in the church',e2:'stone **effigies** in the church'},
+{w:'insolvency',p:'n.',ipa:'/ɪnˈsɒlvənsi/',d:'Insolvency is the state of not having enough money to pay your debts.',e:'...eight mortgage companies, seven of which are on the brink of ___.',e2:'...eight mortgage companies, seven of which are on the brink of **insolvency**.'},
+{w:'reprimand',p:'v.',ipa:'/ˈrɛprɪmɑːnd/',d:'to tell sb officially that you do not approve of them or their actions',e:'The officers were severely ___ for their unprofessional behaviour.',e2:'The officers were severely **reprimanded** for their unprofessional behaviour.'},
+{w:'refrain',p:'v.',ipa:'/rɪˈfreɪn/',d:'to stop yourself from doing sth, especially sth that you want to do',e:'Please ___ from smoking.',e2:'Please **refrain** from smoking.'},
+{w:'hasten',p:'v.',ipa:'/ˈheɪsən/',d:'to say or do sth without delay',e:'She saw his frown and ___ to explain.',e2:'She saw his frown and **hastened** to explain.'},
+{w:'pertinent',p:'adj.',ipa:'/ˈpɜːrtɪnənt/',d:'appropriate to a particular situation',e:'Please keep your comments ___ to the topic under discussion.',e2:'Please keep your comments **pertinent** to the topic under discussion.'},
+{w:'unresponsive',p:'adj.',ipa:'/ˌʌnrɪˈspɒnsɪv/',d:'not reacting to sb/sth; not giving the response that you would expect or hope for',e:'a politician who is ___ to the mood of the country',e2:'a politician who is **unresponsive** to the mood of the country'},
+{w:'upend',p:'v.',ipa:'/ʌpˈɛnd/',d:'to turn sb/sth upside down',e:'The bicycle lay ___ in a ditch.',e2:'The bicycle lay **upended** in a ditch.'},
+{w:'loath',p:'adj./v./n.',ipa:'/loʊθ/',d:'not willing to do sth',e:'He was ___ to admit his mistake.',e2:'He was **loath** to admit his mistake.'},
+{w:'entitle',p:'v.',ipa:'/ɪnˈtaɪtəl/',d:'to give sb the right to have or to do sth',e:'You will be ___ to your pension when you reach 65.',e2:'You will be **entitled** to your pension when you reach 65.'},
 ];
 
-const TOTAL_DAYS = 25;
+const OLD_COHORT_SIZE = 1046;
+const OLD_COHORT_DAYS = 25;
+const NEW_COHORT_DAYS = 5;
+const TOTAL_DAYS = OLD_COHORT_DAYS + NEW_COHORT_DAYS; // 30
 const DAY_MS = 24*60*60*1000;
 const INTERVALS = [1,2,4,7,15,30]; // box 0..5 -> days until next review
 
@@ -1285,14 +1808,32 @@ function seededShuffle(arr, seed){
   return a;
 }
 
-const SHUFFLE_SEED = 20260705; // fixed seed -> same "random" order every load
-const ORDERED_VOCAB = seededShuffle(VOCAB, SHUFFLE_SEED);
-const PER_DAY = Math.ceil(ORDERED_VOCAB.length / TOTAL_DAYS);
-ORDERED_VOCAB.forEach((v,i)=>{ v.id = 'w'+VOCAB.indexOf(v); v.day = Math.floor(i/PER_DAY)+1; });
+// The original 1046 words keep the EXACT same shuffle/seed/day-mapping they
+// have always had, so existing learners' schedules and progress records
+// never shift. The 518 words added later get their own shuffle, landing on
+// days 26-30 only.
+const SHUFFLE_SEED = 20260705;
+const NEW_COHORT_SHUFFLE_SEED = 20260930;
+
+const OLD_VOCAB = VOCAB.slice(0, OLD_COHORT_SIZE);
+const NEW_VOCAB = VOCAB.slice(OLD_COHORT_SIZE);
+
+const ORDERED_OLD = seededShuffle(OLD_VOCAB, SHUFFLE_SEED);
+const PER_DAY_OLD = Math.ceil(ORDERED_OLD.length / OLD_COHORT_DAYS);
+ORDERED_OLD.forEach((v,i)=>{ v.id = 'w'+VOCAB.indexOf(v); v.day = Math.floor(i/PER_DAY_OLD)+1; });
+
+const ORDERED_NEW = seededShuffle(NEW_VOCAB, NEW_COHORT_SHUFFLE_SEED);
+const PER_DAY_NEW = Math.ceil(ORDERED_NEW.length / NEW_COHORT_DAYS) || 1;
+ORDERED_NEW.forEach((v,i)=>{ v.id = 'w'+VOCAB.indexOf(v); v.day = OLD_COHORT_DAYS + Math.floor(i/PER_DAY_NEW)+1; });
+
+const ORDERED_VOCAB = ORDERED_OLD.concat(ORDERED_NEW);
 
 let progress = {};      // id -> {box, next, seen, correct, wrong}
-let startDate = null;   // ms timestamp of day 1
-let todayIndex = 1;
+let startDate = null;   // ms timestamp of day 1 (original 25-day cohort)
+let newCohortStartDate = null; // ms timestamp of day 1 of the 518-word cohort
+let todayIndex = 1;         // days elapsed since startDate (uncapped)
+let newCohortTodayIndex = OLD_COHORT_DAYS + 1; // real day number for new cohort (26-30+, uncapped)
+
 let currentUser = null;
 let lastKnownUid = undefined; // undefined = not yet resolved, null = guest, string = uid
 
@@ -1314,6 +1855,22 @@ async function loadLocalOnly(){
     startDate = todayMs();
   }
   todayIndex = Math.floor((todayMs()-startDate)/DAY_MS)+1;
+
+  try{
+    const v = localStorage.getItem(storageKey('sv_new_cohort_start'));
+    newCohortStartDate = v ? parseInt(v,10) : null;
+  }catch(e){ newCohortStartDate = null; }
+  if(!newCohortStartDate && todayIndex > OLD_COHORT_DAYS){
+    // Only start the new 518-word cohort's 5-day clock once the learner has
+    // actually reached/finished the original 25-day cohort — never earlier,
+    // so new words can't flood in mid-way through the original plan.
+    newCohortStartDate = todayMs();
+    try{ localStorage.setItem(storageKey('sv_new_cohort_start'), String(newCohortStartDate)); }catch(e){}
+  }
+  newCohortTodayIndex = newCohortStartDate
+    ? (OLD_COHORT_DAYS + Math.floor((todayMs()-newCohortStartDate)/DAY_MS)+1)
+    : OLD_COHORT_DAYS; // not started yet -> no new-cohort word counts as introduced
+
   try{
     const v = localStorage.getItem(storageKey('sv_progress'));
     progress = v ? JSON.parse(v) : {};
@@ -1329,14 +1886,19 @@ async function loadState(){
 
 async function saveProgress(){
   try{ localStorage.setItem(storageKey('sv_start_date'), String(startDate)); }catch(e){}
+  if(newCohortStartDate){
+    try{ localStorage.setItem(storageKey('sv_new_cohort_start'), String(newCohortStartDate)); }catch(e){}
+  }
   try{ localStorage.setItem(storageKey('sv_progress'), JSON.stringify(progress)); }catch(e){}
   if(fbEnabled && currentUser){
     try{
-      await db.collection('users').doc(currentUser.uid).set({
+      const payload = {
         progress: progress,
         startDate: startDate,
         updatedAt: firebase.firestore.FieldValue.serverTimestamp()
-      }, {merge:true});
+      };
+      if(newCohortStartDate) payload.newCohortStartDate = newCohortStartDate;
+      await db.collection('users').doc(currentUser.uid).set(payload, {merge:true});
       setSyncBadge(true);
     }catch(e){ console.warn('cloud save failed', e); setSyncBadge(false, true); }
   }
@@ -1365,15 +1927,25 @@ async function pullCloudProgress(){
       progress = data.progress || {};
       startDate = data.startDate || todayMs();
       todayIndex = Math.floor((todayMs()-startDate)/DAY_MS)+1;
+      const shouldStartNewCohortNow = !data.newCohortStartDate && todayIndex > OLD_COHORT_DAYS;
+      newCohortStartDate = data.newCohortStartDate || (shouldStartNewCohortNow ? todayMs() : null);
+      newCohortTodayIndex = newCohortStartDate
+        ? (OLD_COHORT_DAYS + Math.floor((todayMs()-newCohortStartDate)/DAY_MS)+1)
+        : OLD_COHORT_DAYS;
       try{
         localStorage.setItem(storageKey('sv_progress'), JSON.stringify(progress));
         localStorage.setItem(storageKey('sv_start_date'), String(startDate));
+        if(newCohortStartDate) localStorage.setItem(storageKey('sv_new_cohort_start'), String(newCohortStartDate));
       }catch(e){}
+      if(shouldStartNewCohortNow){
+        await saveProgress(); // persist the freshly-started 5-day new-word clock
+      }
     } else {
       // Brand new account: always start completely empty. Never carry over
       // whatever happened to be in memory from a previous session/account.
       progress = {};
       startDate = todayMs();
+      newCohortStartDate = null; // will start once this new account reaches day 25
       await saveProgress(); // creates this account's cloud doc + local cache
     }
     setSyncBadge(true);
@@ -1457,7 +2029,14 @@ function getRecord(id){
   return progress[id];
 }
 
-function isIntroduced(v){ return v.day <= todayIndex; }
+// Old-cohort words (day 1-25) are measured against the original startDate
+// clock; new-cohort words (day 26-30) are measured against their own
+// separate 5-day clock, which starts the first time this account/device
+// sees the update — regardless of how far along the original clock is.
+function effectiveTodayFor(v){
+  return v.day <= OLD_COHORT_DAYS ? todayIndex : newCohortTodayIndex;
+}
+function isIntroduced(v){ return v.day <= effectiveTodayFor(v); }
 function isDue(v){
   const r = progress[v.id];
   if(!r || r.next===null) return false;
@@ -1465,7 +2044,7 @@ function isDue(v){
 }
 function isNewToday(v){
   const r = progress[v.id];
-  return v.day === todayIndex && (!r || r.seen===0);
+  return v.day === effectiveTodayFor(v) && (!r || r.seen===0);
 }
 function isMastered(v){
   const r = progress[v.id];
@@ -1558,9 +2137,16 @@ function updateStats(){
   document.getElementById('statNew').textContent = newWords.length;
   document.getElementById('statDue').textContent = dueWords.length;
   document.getElementById('statMastered').textContent = masteredCount;
-  document.getElementById('dayBadge').textContent = todayIndex <= TOTAL_DAYS
-    ? ('Day ' + todayIndex + ' / ' + TOTAL_DAYS)
-    : ('Day ' + todayIndex + ' — Review Mode');
+
+  let badge;
+  if(todayIndex <= OLD_COHORT_DAYS){
+    badge = 'Day ' + todayIndex + ' / ' + OLD_COHORT_DAYS;
+  } else if(newCohortTodayIndex <= TOTAL_DAYS){
+    badge = 'New Words Day ' + (newCohortTodayIndex - OLD_COHORT_DAYS) + ' / ' + NEW_COHORT_DAYS;
+  } else {
+    badge = 'Day ' + todayIndex + ' — Review Mode';
+  }
+  document.getElementById('dayBadge').textContent = badge;
 }
 
 // ---------- Flashcard renderer (used by both review + learn tabs) ----------
@@ -1640,10 +2226,17 @@ function renderReviewPanel(){
   renderFlashcardQueue('panel-review', words, 'Nothing due for review right now — try the "New Words" tab.');
 }
 function renderLearnPanel(){
-  const words = ORDERED_VOCAB.filter(v=>v.day===todayIndex);
-  const emptyMsg = todayIndex > TOTAL_DAYS
-    ? "All 1046 words have been introduced — nice work finishing the 25-day plan! Keep using the Review tab to stay sharp."
-    : "You've finished today's new words. Come back tomorrow!";
+  const words = ORDERED_VOCAB.filter(v=>v.day===effectiveTodayFor(v));
+  let emptyMsg;
+  if(todayIndex <= OLD_COHORT_DAYS){
+    emptyMsg = "You've finished today's new words. Come back tomorrow!";
+  } else if(newCohortStartDate && newCohortTodayIndex <= TOTAL_DAYS){
+    emptyMsg = "You've finished today's new words from the new 518-word list. Come back tomorrow!";
+  } else if(!newCohortStartDate){
+    emptyMsg = "You've finished the original 25-day plan! The next 518 words will start rolling out — check back soon.";
+  } else {
+    emptyMsg = "All " + ORDERED_VOCAB.length + " words have been introduced — nice work! Keep using the Review tab to stay sharp.";
+  }
   renderFlashcardQueue('panel-learn', words, emptyMsg);
 }
 
@@ -1765,7 +2358,9 @@ function renderProgressPanel(){
   const mastered = introduced.filter(isMastered).length;
   const learning = introduced.filter(v=>{const r=progress[v.id]; return r && r.box>0 && r.box<5;}).length;
   const fresh = introduced.length - mastered - learning;
-  const dayCap = Math.min(todayIndex, TOTAL_DAYS);
+  const dayCap = todayIndex <= OLD_COHORT_DAYS
+    ? todayIndex
+    : (newCohortStartDate ? Math.min(newCohortTodayIndex, TOTAL_DAYS) : OLD_COHORT_DAYS);
   const byDay = {};
   for(let d=1; d<=dayCap; d++){
     const words = ORDERED_VOCAB.filter(v=>v.day===d);
@@ -1773,8 +2368,10 @@ function renderProgressPanel(){
     byDay[d] = {total:words.length, done};
   }
   let rows = '';
-  if(todayIndex > TOTAL_DAYS){
-    rows += `<div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--muted);margin-bottom:8px;">All 25 days of new words are complete — now in ongoing review mode (day ${todayIndex}).</div>`;
+  if(todayIndex > OLD_COHORT_DAYS && (!newCohortStartDate || newCohortTodayIndex <= TOTAL_DAYS)){
+    rows += `<div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--muted);margin-bottom:8px;">The original 25-day plan is complete — now rolling out the 518 additional words over 5 more days.</div>`;
+  } else if(newCohortStartDate && newCohortTodayIndex > TOTAL_DAYS){
+    rows += `<div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;color:var(--muted);margin-bottom:8px;">All ${ORDERED_VOCAB.length} words are complete — now in ongoing review mode.</div>`;
   }
   for(let d=dayCap; d>=1; d--){
     const info = byDay[d];
